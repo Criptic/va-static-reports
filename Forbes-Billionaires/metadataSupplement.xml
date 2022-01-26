@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<metadataSupplement>
+    <tables>
+        <table dataLocale="en_US" dataSources="ds7" resourceIdentifier="'cas-shared-default','CASUSER(gerdaw)','FORBES-BILLIONAIRES','en_US'" tableModifiedTimeStamp="2022-01-25T11:46:35.816Z">
+            <columns>
+                <column dataType="double" format="BEST12." label="Var1" xref="Var1"/>
+                <column dataType="double" format="BEST12." label="Rank" xref="Rank"/>
+                <column dataType="string" label="Name" xref="Name"/>
+                <column dataType="double" format="BEST12." label="Net-Worth" xref="Net-Worth"/>
+                <column dataType="double" format="BEST12." label="Age" xref="Age"/>
+                <column dataType="string" label="Source" xref="Source"/>
+                <column dataType="string" label="Country" xref="Country"/>
+                <column dataType="double" format="BEST12." label="Change-Percent" xref="Change-Percent"/>
+            </columns>
+        </table>
+    </tables>
+    <version>2</version>
+</metadataSupplement>
