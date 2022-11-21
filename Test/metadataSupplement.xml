@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<metadataSupplement>
+    <tables>
+        <table dataLocale="en_US" dataSources="ds7" resourceIdentifier="'cas-shared-default','CASUSER','PORTFOLIO','en'" tableModifiedTimeStamp="2022-11-21T13:47:16.052Z">
+            <columns>
+                <column dataType="double" format="BEST12." label="PD" xref="PD"/>
+                <column dataType="double" format="BEST12." label="konto_id_ec" xref="konto_id_ec"/>
+                <column dataType="double" format="BEST12." label="lgd" xref="lgd"/>
+                <column dataType="double" format="BEST12." label="elbe" xref="elbe"/>
+                <column dataType="double" format="BEST12." label="ccf" xref="ccf"/>
+                <column dataType="string" label="branche" xref="branche"/>
+                <column dataType="string" label="kontoart" xref="kontoart"/>
+                <column dataType="double" format="BEST12." label="nettosd" xref="nettosd"/>
+                <column dataType="double" format="BEST12." label="offene_linie" xref="offene_linie"/>
+                <column dataType="double" format="BEST12." label="pd_pool" xref="pd_pool"/>
+                <column dataType="double" format="BEST12." label="lgd_pool" xref="lgd_pool"/>
+                <column dataType="double" format="BEST12." label="ccf_Pool" xref="ccf_Pool"/>
+                <column dataType="double" format="BEST12." label="konto_id" xref="konto_id"/>
+            </columns>
+        </table>
+        <table dataLocale="en_US" dataSources="ds23" resourceIdentifier="'cas-shared-default','CASUSER','KORR_BUSINESS_EUR','en'" tableModifiedTimeStamp="2022-11-21T13:47:16.945Z">
+            <columns>
+                <column dataType="date" format="MMDDYY8" label="DATUM" xref="DATUM"/>
+                <column dataType="double" format="COMMA15.4" label="AUFWAND" xref="AUFWAND"/>
+                <column dataType="double" format="COMMA15.4" label="R_Aufwand" xref="R_Aufwand"/>
+                <column dataType="double" format="COMMA15.4" label="ERTRAG" xref="ERTRAG"/>
+                <column dataType="double" format="COMMA15.4" label="R_Ertrag" xref="R_Ertrag"/>
+                <column dataType="double" format="COMMA15.4" label="ERGEBNIS" xref="ERGEBNIS"/>
+                <column dataType="double" format="COMMA15.4" label="R_Ergebnis" xref="R_Ergebnis"/>
+                <column dataType="double" format="COMMA15.6" label="EURIBOR_3M" xref="EURIBOR_3M"/>
+                <column dataType="double" format="BEST12." label="R_EURIBOR_3M" xref="R_EURIBOR_3M"/>
+            </columns>
+        </table>
+        <table dataLocale="en_US" dataSources="ds421" resourceIdentifier="'cas-shared-default','CASUSER','CR_DISTRIBUTION','en'" tableModifiedTimeStamp="2022-11-21T13:47:17.243Z">
+            <columns>
+                <column dataType="double" format="COMMA15.2" label="VALUE" xref="VALUE"/>
+                <column dataType="double" format="PERCENT12.2" label="Likelihood" xref="Likelihood"/>
+            </columns>
+        </table>
+        <table dataLocale="en_US" dataSources="ds463" resourceIdentifier="'cas-shared-default','CASUSER','CR_RESULTS','en'" tableModifiedTimeStamp="2022-11-21T13:47:17.093Z">
+            <columns>
+                <column dataType="date" format="MMDDYY8" label="Date" xref="Date"/>
+                <column dataType="string" label="Branche" xref="Branche"/>
+                <column dataType="string" label="Name" xref="Name"/>
+                <column dataType="double" format="COMMA15.2" label="Value" xref="Value"/>
+            </columns>
+        </table>
+    </tables>
+    <version>2</version>
+</metadataSupplement>

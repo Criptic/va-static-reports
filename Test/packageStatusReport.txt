@@ -1,0 +1,5 @@
+Correlation - AUFWAND 1
+  Interactivity for this object is limited for the following reasons:
+    * The data to support actions could not be retrieved. Query limit exceeded: 10000000+ queries required. Query limit = 20000.
+  These reasons may only be a problem because of these data complexities:
+    * This object type requires an advanced query.

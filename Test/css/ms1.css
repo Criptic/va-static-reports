@@ -1,0 +1,11 @@
+#ve126 .TwoColorRamp {
+  fill-gradient-start-color : #E9ECEF;
+  fill-gradient-end-color : #84414B;
+}
+#ve54 .Table {
+  border-style : none;
+}
+#ve575 .Table {
+  wrap-text : normal;
+  display-opts : retainnewline;
+}
