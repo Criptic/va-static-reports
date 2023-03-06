@@ -1,0 +1,1380 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SASReport xmlns="http://www.sas.com/sasreportmodel/bird-4.28.0" label="Top 100 most cited AI Papers of 2022" implicitInteractions="reportPrompt sectionPrompt sectionLink" createdLocale="en" createdVersion="4.28.0" dateCreated="2023-03-06T09:05:31Z" dateModified="2023-03-06T09:05:30Z" createdApplication="SAS Visual Analytics 2020" lastModifiedApplication="SAS Visual Analytics 2020" nextUniqueNameIndex="257">
+	<Results>
+		<Result ref="dd146" type="relational" status="success" dataLevel="baseline" label="Results" dataLocale="en_US" consumerDataModel="aggregated" supportsExportDetail="true" supportsCustomQuery="true" sortLocale="en_US" tableDateModified="2023-03-06T08:27:28.788Z">
+			<Variables>
+				<StringVariable label="Continent" ref="bi148" varname="bi148" column="c0"/>
+				<NumericVariable format="COMMA12." usage="quantitative" definedAggregation="totalCount" label="Count" ref="bi164" varname="bi164" column="c1"/>
+			</Variables>
+			<Columns>
+				<StringColumn maxLength="1" colname="c0" encoding="text"/>
+				<NumericColumn dataType="double" colname="c1" encoding="text"/>
+			</Columns>
+			<DefinedSortItems>
+				<DefinedSortItem variable="bi148" sortDirection="ascending"/>
+			</DefinedSortItems>
+			<Data isIndexed="true" availableRowCount="5" contentKey="4SGV4YFZD7RLPU532TLMDDOVUCXQC3I2" size="34" format="CSV" rowCount="5" grandTotal="false" dataLayout="minimal"><![CDATA[-1,3.0
+0,25.0
+1,2.0
+2,17.0
+3,53.0
+]]></Data>
+			<StringTable contentKey="VH6FTFB653WN2BPFVDT2MUCRDYM7HJ6E" size="44" format="CSV" rowCount="4"><![CDATA["Asia"
+"Australia"
+"Europe"
+"North America"
+]]></StringTable>
+		</Result>
+		<Result ref="dd110" type="relational" status="warning" dataLevel="interactive" label="Region" dataLocale="en_US" supportsExportDetail="true" supportsCustomQuery="false" sortLocale="en_US" tableDateModified="2023-03-06T08:27:28.788Z">
+			<Messages>
+				<Message messageKey="geoMapNoMatchesFoundForRequestedItems" messageLevel="warning">
+					<MessageText>No matches were found for supplied geography data items: (missing).</MessageText>
+					<Parameters>
+						<Parameter key="rollup" varname="ru0"></Parameter>
+					</Parameters>
+				</Message>
+				<Message messageKey="geoMapNoMatchesFoundForRequestedItems" messageLevel="warning">
+					<MessageText>No matches were found for supplied geography data items: (missing).</MessageText>
+					<Parameters>
+						<Parameter key="rollup" varname="ru0">&apos; &apos;</Parameter>
+					</Parameters>
+				</Message>
+			</Messages>
+			<Variables>
+				<StringVariable usage="rollup" label="Continent" ref="bi244" varname="ru0" column="c0"/>
+				<StringVariable label="Country-Geo" ref="bi134" varname="bi134" column="c1"/>
+				<StringVariable label="Map ID" ref="bi122" varname="bi122" column="c2"/>
+				<StringVariable label="Polygon ID" ref="bi123" varname="bi123" column="c3"/>
+				<NumericVariable format="F8." usage="quantitative" label="Citations" ref="bi140" varname="bi140" column="c4"/>
+				<StringVariable label="Country-Geo" ref="bi125" varname="bi125" column="c5"/>
+				<StringVariable label="Country-Geo" ref="bi137" varname="bi137" column="c6"/>
+				<NumericVariable format="F8." usage="quantitative" label="Citations" ref="bi141" varname="bi141" column="c7"/>
+			</Variables>
+			<Columns>
+				<StringColumn maxLength="0" colname="c0" encoding="text"/>
+				<StringColumn maxLength="0" colname="c1" encoding="text"/>
+				<StringColumn maxLength="0" colname="c2" encoding="text"/>
+				<StringColumn maxLength="0" colname="c3" encoding="text"/>
+				<NumericColumn dataType="double" colname="c4" encoding="text"/>
+				<StringColumn maxLength="0" colname="c5" encoding="text"/>
+				<StringColumn maxLength="0" colname="c6" encoding="text"/>
+				<NumericColumn dataType="double" colname="c7" encoding="text"/>
+			</Columns>
+			<Data isIndexed="true" availableRowCount="34" contentKey="OIPSEK5BAQJN75YCP2KTV4O25ALXSC7T" size="1009" format="CSV" rowCount="34" grandTotal="false" dataLayout="rollup"><![CDATA[-100,13,29,12,39.0,13,13,39.0
+-100,20,29,16,41.0,20,20,41.0
+-100,21,29,17,65.0,21,21,65.0
+-100,30,29,31,73.0,30,30,73.0
+-100,4,29,3,90.0,4,4,90.0
+-100,34,29,33,93.0,34,34,93.0
+-100,19,29,18,102.0,19,19,102.0
+-100,35,29,24,129.0,35,35,129.0
+-100,36,29,5,141.0,36,36,141.0
+-100,22,29,23,204.0,22,22,204.0
+-100,2,29,1,231.0,2,2,231.0
+-100,9,29,10,274.0,9,9,274.0
+-100,37,29,14,1087.0,37,37,1087.0
+-100,15,29,8,1204.0,15,15,1204.0
+-100,-1,-1,-1,1467.0,-1,-1,1467.0
+-100,6,29,7,1702.0,6,6,1702.0
+-100,38,29,39,6957.0,38,38,6957.0
+-1,-1,-1,-1,1467.0,-1,-1,1467.0
+0,21,25,17,65.0,21,21,65.0
+0,34,25,33,93.0,34,34,93.0
+0,19,25,18,102.0,19,19,102.0
+0,35,25,24,129.0,35,35,129.0
+0,22,25,23,204.0,22,22,204.0
+0,6,25,7,1702.0,6,6,1702.0
+2,2,28,1,231.0,2,2,231.0
+11,13,26,12,39.0,13,13,39.0
+11,20,26,16,41.0,20,20,41.0
+11,30,26,31,73.0,30,30,73.0
+11,36,26,5,141.0,36,36,141.0
+11,9,26,10,274.0,9,9,274.0
+11,37,26,14,1087.0,37,37,1087.0
+11,15,26,8,1204.0,15,15,1204.0
+32,4,27,3,90.0,4,4,90.0
+32,38,27,39,6957.0,38,38,6957.0
+]]></Data>
+			<StringTable contentKey="OFH454LNXMGFGU5S553OQ53EJUC32H5R" size="387" format="CSV" rowCount="40"><![CDATA["Asia"
+"AU"
+"Australia"
+"CA"
+"Canada"
+"CH"
+"China"
+"CN"
+"DE"
+"Denmark"
+"DK"
+"Europe"
+"FR"
+"France"
+"GB"
+"Germany"
+"IE"
+"IL"
+"IN"
+"India"
+"Ireland"
+"Israel"
+"Japan"
+"JP"
+"KR"
+"MAPSGFK.VAASIA"
+"MAPSGFK.VAEUROPE"
+"MAPSGFK.VANAMERICA"
+"MAPSGFK.VAOCEANIA"
+"MAPSGFK.VAWORLD"
+"Netherlands"
+"NL"
+"North America"
+"SG"
+"Singapore"
+"South Korea"
+"Switzerland"
+"United Kingdom"
+"United States"
+"US"
+]]></StringTable>
+			<MapDataFiles>
+				<MapDataFile contentKey="OJBK3T6TM7ATKDAEMIQL4ZTAOMCLVCR3" size="523606" mapId="MAPSGFK.VAASIA" file="dd110_MAPSGFK.VAASIA.gml"/>
+				<MapDataFile contentKey="MLOMEJHXZV3SQ62Q5VLX2CKYEHDU4ABB" size="621773" mapId="MAPSGFK.VAEUROPE" file="dd110_MAPSGFK.VAEUROPE.gml"/>
+				<MapDataFile contentKey="6RWU7FVPKEZOUGGAPIGWATPCEFEXZFPR" size="2407119" mapId="MAPSGFK.VAWORLD" file="dd110_MAPSGFK.VAWORLD.gml"/>
+				<MapDataFile contentKey="TUZNYJJK2SCT2WUBTXCAMSQBZ66JIPNP" size="1179903" mapId="MAPSGFK.VANAMERICA" file="dd110_MAPSGFK.VANAMERICA.gml"/>
+				<MapDataFile contentKey="4VUASIZFUEEMQGBZASDUGOPBEPB54PHR" size="384726" mapId="MAPSGFK.VAOCEANIA" file="dd110_MAPSGFK.VAOCEANIA.gml"/>
+			</MapDataFiles>
+		</Result>
+		<Result ref="dd156" type="relational" status="success" dataLevel="interactive" label="Results" dataLocale="en_US" consumerDataModel="aggregated" supportsExportDetail="true" supportsCustomQuery="true" sortLocale="en_US" tableDateModified="2023-03-06T08:27:28.788Z">
+			<Variables>
+				<StringVariable label="Organizations" ref="bi162" varname="bi162" column="c0"/>
+				<StringVariable label="Continent" ref="bi245" varname="bi245" column="c1"/>
+				<StringVariable label="Country-Geo" ref="bi246" varname="bi246" column="c2"/>
+				<NumericVariable format="F8." usage="quantitative" definedAggregation="sum" label="Citations" ref="bi158" varname="bi158" column="c3"/>
+				<NumericVariable format="COMMA12." usage="quantitative" definedAggregation="totalCount" label="Count" ref="bi159" varname="bi159" column="c4"/>
+				<NumericVariable format="PERCENT20.2" usage="quantitative" definedAggregation="totalCountPercent" label="Frequency Percent" ref="bi163" varname="bi163" column="c5"/>
+			</Variables>
+			<Columns>
+				<StringColumn maxLength="2" colname="c0" encoding="text"/>
+				<StringColumn maxLength="2" colname="c1" encoding="text"/>
+				<StringColumn maxLength="2" colname="c2" encoding="text"/>
+				<NumericAggregations colname="c3" encoding="text">
+					<DataColumn dataType="double" aggregation="sum"/>
+				</NumericAggregations>
+				<NumericAggregations colname="c4" encoding="text">
+					<DataColumn dataType="double" aggregation="totalCount"/>
+				</NumericAggregations>
+				<NumericAggregations colname="c5" encoding="text">
+					<DataColumn dataType="double" aggregation="totalCount"/>
+				</NumericAggregations>
+			</Columns>
+			<DefinedColumnSortItems>
+				<DefinedSortItem variable="bi162" sortDirection="ascending"/>
+			</DefinedColumnSortItems>
+			<DataFile contentKey="HFZB5WGICY5LAPGHH6KHHDGY7OI66QJX" size="1282" format="CSV" rowCount="59" grandTotal="false" dataLayout="partiallyAggregated" file="dd156.csv" isIndexed="true" availableRowCount="59"/>
+			<StringTableFile contentKey="DOLK2SMQDSCFLWUPBEM53X6MFTNS3W6F" size="1689" format="CSV" rowCount="78" file="dd156index.csv"/>
+		</Result>
+		<Result ref="dd183" type="relational" status="success" dataLevel="interactive" label="Results" dataLocale="en_US" consumerDataModel="aggregated" supportsExportDetail="true" supportsCustomQuery="false" sortLocale="en_US" tableDateModified="2023-03-06T08:27:28.788Z">
+			<Variables>
+				<StringVariable usage="rollup" label="Organizations" ref="bi249" varname="ru0" column="c0"/>
+				<StringVariable usage="rollup" label="Country-Geo" ref="bi248" varname="ru1" column="c1"/>
+				<StringVariable usage="rollup" label="Continent" ref="bi247" varname="ru2" column="c2"/>
+				<StringVariable label="Title" ref="bi196" varname="bi196" column="c3"/>
+				<NumericVariable format="COMMA12.2" usage="quantitative" label="Max Cited Paper" ref="bi195" varname="bi195" column="c4"/>
+			</Variables>
+			<Columns>
+				<StringColumn maxLength="0" colname="c0" encoding="text"/>
+				<StringColumn maxLength="0" colname="c1" encoding="text"/>
+				<StringColumn maxLength="0" colname="c2" encoding="text"/>
+				<StringColumn maxLength="0" colname="c3" encoding="text"/>
+				<NumericColumn dataType="double" colname="c4" encoding="text"/>
+			</Columns>
+			<DefinedColumnSortItems>
+				<DefinedMeasureSortItem variable="bi195" sortDirection="descending"/>
+			</DefinedColumnSortItems>
+			<DataFile contentKey="ZVSXTD3SJM4YKS4UAJHWIOSW2D4N55ZT" size="17100" format="CSV" rowCount="800" grandTotal="false" dataLayout="rollup" file="dd183.csv" isIndexed="true" availableRowCount="800"/>
+			<StringTableFile contentKey="CYUNJQJKVTI2YBQAJXJXR3B4IN5MEVEN" size="8792" format="CSV" rowCount="178" file="dd183index.csv"/>
+		</Result>
+		<Result ref="dd185" type="relational" status="success" dataLevel="interactive" label="Results" dataLocale="en_US" consumerDataModel="aggregated" supportsExportDetail="true" supportsCustomQuery="false" sortLocale="en_US" tableDateModified="2023-03-06T08:27:28.788Z">
+			<Variables>
+				<StringVariable usage="rollup" label="Country-Geo" ref="bi251" varname="ru0" column="c0"/>
+				<StringVariable usage="rollup" label="Continent" ref="bi250" varname="ru1" column="c1"/>
+				<StringVariable usage="rollup" label="Organizations" ref="bi199" varname="ru2" column="c2"/>
+				<StringVariable label="Organizations" ref="bi199" varname="bi199" column="c3"/>
+				<NumericVariable format="COMMA12.2" usage="quantitative" label="Organization with Most Papers" ref="bi198" varname="bi198" column="c4"/>
+			</Variables>
+			<Columns>
+				<StringColumn maxLength="0" colname="c0" encoding="text"/>
+				<StringColumn maxLength="0" colname="c1" encoding="text"/>
+				<StringColumn maxLength="0" colname="c2" encoding="text"/>
+				<StringColumn maxLength="0" colname="c3" encoding="text"/>
+				<NumericColumn dataType="double" colname="c4" encoding="text"/>
+			</Columns>
+			<DefinedColumnSortItems>
+				<DefinedMeasureSortItem variable="bi198" sortDirection="descending"/>
+			</DefinedColumnSortItems>
+			<DataFile contentKey="M5YZNDGMNM5I2ZHKB6SEUKQOMRFNHXGU" size="8724" format="CSV" rowCount="472" grandTotal="false" dataLayout="rollup" file="dd185.csv" isIndexed="true" availableRowCount="472"/>
+			<StringTableFile contentKey="DOLK2SMQDSCFLWUPBEM53X6MFTNS3W6F" size="1689" format="CSV" rowCount="78" file="dd185index.csv"/>
+		</Result>
+		<Result ref="dd200" type="relational" status="success" dataLevel="interactive" label="Results" dataLocale="en_US" consumerDataModel="aggregated" supportsExportDetail="true" supportsCustomQuery="false" sortLocale="en_US" tableDateModified="2023-03-06T08:27:28.788Z">
+			<Variables>
+				<StringVariable usage="rollup" label="Country-Geo" ref="bi216" varname="ru0" column="c0"/>
+				<StringVariable usage="rollup" label="Organizations" ref="bi253" varname="ru1" column="c1"/>
+				<StringVariable usage="rollup" label="Continent" ref="bi252" varname="ru2" column="c2"/>
+				<StringVariable label="Country-Geo" ref="bi216" varname="bi216" column="c3"/>
+				<NumericVariable format="COMMA12.2" usage="quantitative" label="Organization with Most Papers" ref="bi202" varname="bi202" column="c4"/>
+			</Variables>
+			<Columns>
+				<StringColumn maxLength="0" colname="c0" encoding="text"/>
+				<StringColumn maxLength="0" colname="c1" encoding="text"/>
+				<StringColumn maxLength="0" colname="c2" encoding="text"/>
+				<StringColumn maxLength="0" colname="c3" encoding="text"/>
+				<NumericColumn dataType="double" colname="c4" encoding="text"/>
+			</Columns>
+			<DefinedColumnSortItems>
+				<DefinedMeasureSortItem variable="bi202" sortDirection="descending"/>
+			</DefinedColumnSortItems>
+			<DataFile contentKey="LSCOGZ2OZXKO5Q3HILYZL7QVCCVST2W6" size="5398" format="CSV" rowCount="304" grandTotal="false" dataLayout="rollup" file="dd200.csv" isIndexed="true" availableRowCount="304"/>
+			<StringTableFile contentKey="DOLK2SMQDSCFLWUPBEM53X6MFTNS3W6F" size="1689" format="CSV" rowCount="78" file="dd200index.csv"/>
+		</Result>
+		<Result ref="dd208" type="relational" status="success" dataLevel="interactive" label="Results" dataLocale="en_US" consumerDataModel="aggregated" supportsExportDetail="true" supportsCustomQuery="false" sortLocale="en_US" tableDateModified="2023-03-06T08:27:28.788Z">
+			<Variables>
+				<StringVariable usage="rollup" label="Organizations" ref="bi256" varname="ru0" column="c0"/>
+				<StringVariable usage="rollup" label="Country-Geo" ref="bi255" varname="ru1" column="c1"/>
+				<StringVariable usage="rollup" label="Continent" ref="bi254" varname="ru2" column="c2"/>
+				<StringVariable label="Title" ref="bi218" varname="bi218" column="c3"/>
+				<NumericVariable format="COMMA12.2" usage="quantitative" label="Max Tweeted Paper" ref="bi220" varname="bi220" column="c4"/>
+			</Variables>
+			<Columns>
+				<StringColumn maxLength="0" colname="c0" encoding="text"/>
+				<StringColumn maxLength="0" colname="c1" encoding="text"/>
+				<StringColumn maxLength="0" colname="c2" encoding="text"/>
+				<StringColumn maxLength="0" colname="c3" encoding="text"/>
+				<NumericColumn dataType="double" colname="c4" encoding="text"/>
+			</Columns>
+			<DefinedColumnSortItems>
+				<DefinedMeasureSortItem variable="bi220" sortDirection="descending"/>
+			</DefinedColumnSortItems>
+			<DataFile contentKey="AKPMTGYGBVRCGLDFUVEU3NAKRP6T3IKW" size="16580" format="CSV" rowCount="800" grandTotal="false" dataLayout="rollup" file="dd208.csv" isIndexed="true" availableRowCount="800"/>
+			<StringTableFile contentKey="CYUNJQJKVTI2YBQAJXJXR3B4IN5MEVEN" size="8792" format="CSV" rowCount="178" file="dd208index.csv"/>
+		</Result>
+		<Result ref="dd170" type="relational" status="success" dataLevel="interactive" label="Results" dataLocale="en_US" consumerDataModel="aggregated" supportsExportDetail="true" supportsCustomQuery="true" sortLocale="en_US" tableDateModified="2023-03-06T08:27:28.788Z">
+			<Variables>
+				<StringVariable label="Title" ref="bi171" varname="bi171" column="c0"/>
+				<StringVariable label="Organizations" ref="bi172" varname="bi172" column="c1"/>
+				<StringVariable label="Countries" ref="bi173" varname="bi173" column="c2"/>
+				<NumericVariable format="F8." usage="quantitative" definedAggregation="sum" label="Citations" ref="bi174" varname="bi174" column="c3"/>
+				<NumericVariable format="F8." usage="quantitative" definedAggregation="sum" label="Tweets" ref="bi175" varname="bi175" column="c4"/>
+				<StringVariable label="Org_Types" ref="bi176" varname="bi176" column="c5"/>
+				<StringVariable label="Country-Geo" ref="bi95" varname="bi95" column="c6"/>
+				<StringVariable label="Continent" ref="bi90" varname="bi90" column="c7"/>
+			</Variables>
+			<Columns>
+				<StringColumn maxLength="3" colname="c0" encoding="text"/>
+				<StringColumn maxLength="3" colname="c1" encoding="text"/>
+				<StringColumn maxLength="3" colname="c2" encoding="text"/>
+				<NumericAggregations colname="c3" encoding="text">
+					<DataColumn dataType="double" aggregation="sum"/>
+				</NumericAggregations>
+				<NumericAggregations colname="c4" encoding="text">
+					<DataColumn dataType="double" aggregation="sum"/>
+				</NumericAggregations>
+				<StringColumn maxLength="2" colname="c5" encoding="text"/>
+				<StringColumn maxLength="3" colname="c6" encoding="text"/>
+				<StringColumn maxLength="3" colname="c7" encoding="text"/>
+			</Columns>
+			<DefinedSortItems>
+				<DefinedSortItem variable="bi171" sortDirection="ascending"/>
+			</DefinedSortItems>
+			<DataFile contentKey="74FTGBOZLKFMOAEE5CQ7ANLSDFNN5NMI" size="3039" format="CSV" rowCount="100" grandTotal="false" dataLayout="partiallyAggregated" file="dd170.csv" isIndexed="true" availableRowCount="100"/>
+			<StringTableFile contentKey="OE5SWD47F24LNOYVTWW74EO4IS544AIK" size="9007" format="CSV" rowCount="193" file="dd170index.csv"/>
+		</Result>
+	</Results>
+	<DataDefinitions>
+		<DataDefinition dataSource="ds129" type="mapprovider" name="dd127"/>
+		<ParentDataDefinition childQueryRelationship="independent" status="executable" dataSource="ds18" name="dd108">
+			<BusinessItems>
+				<SyntheticItems name="si119">
+					<Item purpose="geoItem" root="bi131" name="bi134"/>
+					<Item purpose="dataTip" root="bi131" name="bi137"/>
+					<Item purpose="dataTip" root="bi139" name="bi141"/>
+					<Item purpose="color" root="bi139" name="bi140"/>
+					<Item purpose="mapId" root="bi133" name="bi122"/>
+					<Item purpose="polygonId" root="bi132" name="bi123"/>
+					<Item purpose="geoItemRaw" root="bi131" name="bi125"/>
+				</SyntheticItems>
+				<RelationalDataItem includeAssociatedColumns="true" name="bi131" base="bi95"/>
+				<LookupDataItem property="polygonId" lookup="bi95" name="bi132"/>
+				<LookupDataItem property="mapId" lookup="bi95" name="bi133"/>
+				<RelationalDataItem name="bi139" base="bi19"/>
+				<RelationalDataItem name="bi244" base="bi90"/>
+			</BusinessItems>
+			<DataDefinition dataSource="ds18" type="procedural" name="dd109">
+				<ProceduralQuery type="geoMap" scoreCodeNumber="118">
+					<Arguments>
+						<Argument purpose="geoType">
+							<StringValue>region</StringValue>
+						</Argument>
+						<Argument purpose="geoItem">
+							<ReferenceValue>bi131</ReferenceValue>
+						</Argument>
+						<Argument purpose="polygonId">
+							<ReferenceValue>bi132</ReferenceValue>
+						</Argument>
+						<Argument purpose="mapId">
+							<ReferenceValue>bi133</ReferenceValue>
+						</Argument>
+					</Arguments>
+					<SortItems>
+						<SortItem ref="bi139" sortDirection="ascending"/>
+					</SortItems>
+				</ProceduralQuery>
+				<ResultDefinitions>
+					<ResultDefinition purpose="primary" maxRowsLookup="geoRegion" maxRowsBehavior="truncate" name="dd110" syntheticItems="si119"/>
+				</ResultDefinitions>
+			</DataDefinition>
+		</ParentDataDefinition>
+		<ParentDataDefinition childQueryRelationship="independent" status="executable" dataSource="ds18" name="dd144">
+			<BusinessItems>
+				<RelationalDataItem name="bi148" base="bi90"/>
+				<RelationalDataItem name="bi164" base="bi25"/>
+			</BusinessItems>
+			<DataDefinition dataSource="ds18" type="relational" name="dd145">
+				<RelationalQuery detail="false">
+					<Axes>
+						<Axis type="column">
+							<BusinessItem ref="bi148"/>
+							<BusinessItem ref="bi164"/>
+						</Axis>
+					</Axes>
+					<SortItems>
+						<SortItem ref="bi148" sortDirection="ascending"/>
+					</SortItems>
+				</RelationalQuery>
+				<ResultDefinitions>
+					<ResultDefinition purpose="primary" maxRowsLookup="buttonBar" maxRowsBehavior="truncate" name="dd146"/>
+				</ResultDefinitions>
+			</DataDefinition>
+		</ParentDataDefinition>
+		<ParentDataDefinition childQueryRelationship="independent" status="executable" dataSource="ds18" name="dd154">
+			<BusinessItems>
+				<RelationalDataItem name="bi158" base="bi19"/>
+				<RelationalDataItem name="bi159" base="bi25"/>
+				<RelationalDataItem name="bi162" base="bi22"/>
+				<RelationalDataItem name="bi163" base="bi26"/>
+				<RelationalDataItem name="bi245" base="bi90"/>
+				<RelationalDataItem name="bi246" base="bi95"/>
+			</BusinessItems>
+			<DataDefinition dataSource="ds18" type="multidimensional" name="dd155">
+				<MultidimensionalQuery detail="false">
+					<Axes>
+						<Axis type="column">
+							<BusinessItem ref="bi162"/>
+						</Axis>
+						<Axis type="row">
+							<BusinessItem ref="bi158"/>
+							<BusinessItem ref="bi159"/>
+							<BusinessItem ref="bi163"/>
+						</Axis>
+					</Axes>
+					<ColumnSortItems>
+						<SortItem ref="bi162" sortDirection="ascending"/>
+					</ColumnSortItems>
+				</MultidimensionalQuery>
+				<ResultDefinitions>
+					<ResultDefinition purpose="primary" maxRowsLookup="bubble" maxRowsBehavior="noData" name="dd156"/>
+				</ResultDefinitions>
+			</DataDefinition>
+		</ParentDataDefinition>
+		<ParentDataDefinition childQueryRelationship="independent" status="executable" dataSource="ds18" name="dd168">
+			<BusinessItems>
+				<RelationalDataItem name="bi171" base="bi23"/>
+				<RelationalDataItem name="bi172" base="bi22"/>
+				<RelationalDataItem name="bi173" base="bi20"/>
+				<RelationalDataItem name="bi174" base="bi19"/>
+				<RelationalDataItem name="bi175" base="bi24"/>
+				<RelationalDataItem name="bi176" base="bi21"/>
+			</BusinessItems>
+			<DataDefinition dataSource="ds18" type="relational" name="dd169">
+				<RelationalQuery detail="false">
+					<Axes>
+						<Axis type="column">
+							<BusinessItem ref="bi171"/>
+							<BusinessItem ref="bi172"/>
+							<BusinessItem ref="bi173"/>
+							<BusinessItem ref="bi174"/>
+							<BusinessItem ref="bi175"/>
+							<BusinessItem ref="bi176"/>
+						</Axis>
+					</Axes>
+					<SortItems>
+						<SortItem ref="bi171" sortDirection="ascending"/>
+					</SortItems>
+				</RelationalQuery>
+				<ResultDefinitions>
+					<ResultDefinition purpose="primary" maxRowsLookup="listTable" maxRowsBehavior="truncate" name="dd170"/>
+				</ResultDefinitions>
+			</DataDefinition>
+		</ParentDataDefinition>
+		<ParentDataDefinition childQueryRelationship="independent" status="executable" dataSource="ds18" name="dd181">
+			<BusinessItems>
+				<RelationalDataItem name="bi195" base="bi194"/>
+				<RelationalDataItem name="bi196" base="bi23"/>
+				<RelationalDataItem name="bi247" base="bi90"/>
+				<RelationalDataItem name="bi248" base="bi95"/>
+				<RelationalDataItem name="bi249" base="bi22"/>
+			</BusinessItems>
+			<DataDefinition dataSource="ds18" type="multidimensional" name="dd182">
+				<MultidimensionalQuery detail="false">
+					<Axes>
+						<Axis type="column">
+							<BusinessItem ref="bi196"/>
+						</Axis>
+						<Axis type="row">
+							<BusinessItem ref="bi195"/>
+						</Axis>
+					</Axes>
+					<ColumnSortItems>
+						<MeasureSortItem ref="bi195" sortDirection="descending"/>
+					</ColumnSortItems>
+				</MultidimensionalQuery>
+				<ResultDefinitions>
+					<ResultDefinition purpose="primary" maxRowsLookup="keyValue" maxRowsBehavior="truncate" name="dd183"/>
+				</ResultDefinitions>
+			</DataDefinition>
+		</ParentDataDefinition>
+		<ParentDataDefinition childQueryRelationship="independent" status="executable" dataSource="ds18" name="dd186">
+			<BusinessItems>
+				<RelationalDataItem name="bi198" base="bi197"/>
+				<RelationalDataItem name="bi199" base="bi22"/>
+				<RelationalDataItem name="bi250" base="bi90"/>
+				<RelationalDataItem name="bi251" base="bi95"/>
+			</BusinessItems>
+			<DataDefinition dataSource="ds18" type="multidimensional" name="dd187">
+				<MultidimensionalQuery detail="false">
+					<Axes>
+						<Axis type="column">
+							<BusinessItem ref="bi199"/>
+						</Axis>
+						<Axis type="row">
+							<BusinessItem ref="bi198"/>
+						</Axis>
+					</Axes>
+					<ColumnSortItems>
+						<MeasureSortItem ref="bi198" sortDirection="descending"/>
+					</ColumnSortItems>
+				</MultidimensionalQuery>
+				<ResultDefinitions>
+					<ResultDefinition purpose="primary" maxRowsLookup="keyValue" maxRowsBehavior="truncate" name="dd185"/>
+				</ResultDefinitions>
+			</DataDefinition>
+		</ParentDataDefinition>
+		<ParentDataDefinition childQueryRelationship="independent" status="executable" dataSource="ds18" name="dd203">
+			<BusinessItems>
+				<RelationalDataItem name="bi202" base="bi197"/>
+				<RelationalDataItem name="bi216" base="bi95"/>
+				<RelationalDataItem name="bi252" base="bi90"/>
+				<RelationalDataItem name="bi253" base="bi22"/>
+			</BusinessItems>
+			<DataDefinition dataSource="ds18" type="multidimensional" name="dd204">
+				<MultidimensionalQuery detail="false">
+					<Axes>
+						<Axis type="column">
+							<BusinessItem ref="bi216"/>
+						</Axis>
+						<Axis type="row">
+							<BusinessItem ref="bi202"/>
+						</Axis>
+					</Axes>
+					<ColumnSortItems>
+						<MeasureSortItem ref="bi202" sortDirection="descending"/>
+					</ColumnSortItems>
+				</MultidimensionalQuery>
+				<ResultDefinitions>
+					<ResultDefinition purpose="primary" maxRowsLookup="keyValue" maxRowsBehavior="truncate" name="dd200"/>
+				</ResultDefinitions>
+			</DataDefinition>
+		</ParentDataDefinition>
+		<ParentDataDefinition childQueryRelationship="independent" status="executable" dataSource="ds18" name="dd211">
+			<BusinessItems>
+				<RelationalDataItem name="bi218" base="bi23"/>
+				<RelationalDataItem name="bi220" base="bi219"/>
+				<RelationalDataItem name="bi254" base="bi90"/>
+				<RelationalDataItem name="bi255" base="bi95"/>
+				<RelationalDataItem name="bi256" base="bi22"/>
+			</BusinessItems>
+			<DataDefinition dataSource="ds18" type="multidimensional" name="dd212">
+				<MultidimensionalQuery detail="false">
+					<Axes>
+						<Axis type="column">
+							<BusinessItem ref="bi218"/>
+						</Axis>
+						<Axis type="row">
+							<BusinessItem ref="bi220"/>
+						</Axis>
+					</Axes>
+					<ColumnSortItems>
+						<MeasureSortItem ref="bi220" sortDirection="descending"/>
+					</ColumnSortItems>
+				</MultidimensionalQuery>
+				<ResultDefinitions>
+					<ResultDefinition purpose="primary" maxRowsLookup="keyValue" maxRowsBehavior="truncate" name="dd208"/>
+				</ResultDefinitions>
+			</DataDefinition>
+		</ParentDataDefinition>
+	</DataDefinitions>
+	<DataSources>
+		<DataSource label="TOP_CITED_2022" type="relational" name="ds18">
+			<CasResource server="cas-shared-default" library="CASUSER" table="TOP_CITED_2022" locale="en_US"/>
+			<BusinessItemFolder>
+				<DataItem name="bi19" xref="Citations"/>
+				<DataItem name="bi20" xref="Countries"/>
+				<DataItem name="bi21" xref="Org_Types"/>
+				<DataItem name="bi22" xref="Organizations"/>
+				<DataItem name="bi23" xref="Title"/>
+				<DataItem name="bi24" xref="Tweets"/>
+				<PredefinedDataItem calculation="totalCount" name="bi25" label="Count" usage="quantitative" format="COMMA12."/>
+				<PredefinedDataItem calculation="totalCountPercent" name="bi26" label="Frequency Percent" usage="quantitative" format="PERCENT20.2"/>
+				<GroupedItem grouping="gr29" dataType="string" label="Country" name="bi27">
+					<GroupingParameters>
+						<GroupingParameter parameter="bi20" variable="var28"/>
+					</GroupingParameters>
+				</GroupedItem>
+				<GroupedItem grouping="gr92" dataType="string" label="Continent" name="bi90">
+					<GroupingParameters>
+						<GroupingParameter parameter="bi20" variable="var91"/>
+					</GroupingParameters>
+				</GroupedItem>
+				<GroupedItem grouping="gr94" dataType="string" label="Country-Geo" name="bi95">
+					<GeoInfo geoType="external" coordinateSpace="WGS84">
+						<Lookup property="longitude" externalSource="country.names"/>
+						<Lookup property="latitude" externalSource="country.names"/>
+						<Lookup property="polygonId" externalSource="country.names"/>
+						<Lookup property="mapId" externalSource="country.names"/>
+					</GeoInfo>
+					<GroupingParameters>
+						<GroupingParameter parameter="bi20" variable="var28"/>
+					</GroupingParameters>
+				</GroupedItem>
+				<Hierarchy name="bi96" label="Continent - Country-Geo">
+					<Level ref="bi90"/>
+					<Level ref="bi95"/>
+				</Hierarchy>
+				<AggregateCalculatedItem dataType="double" name="bi194" label="Max Cited Paper" format="COMMA12.2">
+					<Expression>aggregate(max,group,${bi19,raw})</Expression>
+				</AggregateCalculatedItem>
+				<AggregateCalculatedItem dataType="double" name="bi197" label="Organization with Most Papers" format="COMMA12.2">
+					<Expression>aggregate(count,group,${bi25,raw})</Expression>
+				</AggregateCalculatedItem>
+				<AggregateCalculatedItem dataType="double" name="bi219" label="Max Tweeted Paper" format="COMMA12.2">
+					<Expression>aggregate(max,group,${bi24,raw})</Expression>
+				</AggregateCalculatedItem>
+			</BusinessItemFolder>
+		</DataSource>
+		<DataSource label="OpenStreetMapProvider" type="mapprovider" name="ds129">
+			<OpenStreetMapProvider useSSL="true" osmType="SAS_AUTO"/>
+		</DataSource>
+	</DataSources>
+	<VisualElements>
+		<Graph graphType="geo" graphSubType="geoRegion" supplementalVisuals="ve130" mapData="dd127" resultDefinitions="dd110" name="ve107" data="dd108" label="Geo region - Country-Geo 1" action="ac177" applyDynamicBrushes="yes" sourceInteractionVariables="bi125">
+			<EditorProperties>
+				<Property key="isAutoLabel">true</Property>
+				<Property key="derivedVisualType">true</Property>
+				<Property key="addedInteractionQueryDataItems">bi244</Property>
+			</EditorProperties>
+<![CDATA[<StatGraph border="false" opaque="false" includeMissingDiscrete="true" missingValueDisplay="autolabel">
+    <Dimension/>
+    <PadAttrs top="0px" bottom="0px" left="0px" right="0px"/>
+    <Dimension/>
+    <Meta>
+        <DataNameMap>
+            <Entry model="LayoutOverlayMap_15" data="dd110"/>
+        </DataNameMap>
+    </Meta>
+    <LayoutOverlayMap cycleAttrs="true" cycleColorResponses="true" name="LayoutOverlayMap_15">
+        <MapLayer name="MapLayer_15" dataTransparency="0"/>
+        <MapRegionLayer name="Regions" dataTransparency="0.129999995" tipListPolicy="replace" compactLabelFormats="true" auxiliary="Role1 Role1" tip="Role2 Role3" identification="dd110#bi123" colorResponse="dd110#bi140" dataSetName="dd110#bi122" dataLabel="dd110#bi134">
+            <CompactLabelFormatOpts scaleType="number" scale="3"/>
+            <Roles>
+                <Role name="Role1" type="variable">dd110#bi134</Role>
+                <Role name="Role2" type="variable">dd110#bi137</Role>
+                <Role name="Role3" type="variable">dd110#bi141</Role>
+            </Roles>
+            <DataLabelAttrs size="10.5pt"/>
+        </MapRegionLayer>
+    </LayoutOverlayMap>
+    <LayoutGlobalLegend allowCollapsed="false" visible="off">
+        <ContinuousLegend border="false" opaque="false" valueStyle="inflections" displayMissing="automatic" extractScale="true" title_type="KEYWORD" title="AUTO">
+            <GraphNames>
+                <Value>Regions</Value>
+            </GraphNames>
+        </ContinuousLegend>
+        <AutoLegend>
+            <GraphNames>
+                <Value>Regions</Value>
+            </GraphNames>
+        </AutoLegend>
+    </LayoutGlobalLegend>
+    <Animation keyframesPerSecond="1" playDirectionForward="true" repeatEnabled="false"/>
+</StatGraph>]]>
+		</Graph>
+		<Prompt ref="pr147" name="ve143" label="Button bar - Continent 1" selectionDisabled="true" applyDynamicBrushes="promptsOnly" sourceInteractionVariables="bi148">
+			<EditorProperties>
+				<Property key="autoChartCategory">CONTROL</Property>
+				<Property key="isAutoLabel">true</Property>
+			</EditorProperties>
+			<LinkBar/>
+		</Prompt>
+		<VisualContainer containerType="layout" name="ve151" label="Layout Container 1" selectionDisabled="true">
+			<EditorProperties>
+				<Property key="visualType">LAYOUT_CONTAINER</Property>
+			</EditorProperties>
+		</VisualContainer>
+		<Graph graphType="bubble" supplementalVisuals="ve157" resultDefinitions="dd156" name="ve153" data="dd154" label="Bubble - Citations 1" action="ac178" applyDynamicBrushes="yes" sourceInteractionVariables="bi162">
+			<EditorProperties>
+				<Property key="isAutoLabel">true</Property>
+				<Property key="addedInteractionQueryDataItems">bi245,bi246</Property>
+			</EditorProperties>
+			<Title auto="true"><P><DynamicSpan key="bird.autotitle.template.oneByTwoSizedByThree.fmt.txt"><Substitutions><Substitution valueType="label" variables="bi25"/><Substitution valueType="label" variables="bi19"/><Substitution valueType="label" variables="bi26"/></Substitutions></DynamicSpan></P></Title>
+<![CDATA[<StatGraph border="false" opaque="false" includeMissingDiscrete="true" selectionMode="multiple" missingValueDisplay="autolabel">
+    <Dimension/>
+    <PadAttrs top="0px" bottom="0px" left="0px" right="0px"/>
+    <Dimension/>
+    <Meta>
+        <DynVars>
+            <DynVar name="X" description="X_VAR" required="true" assignedType="numeric" type="numeric">
+                <DefaultValues>
+                    <Value>dd156.bi158</Value>
+                </DefaultValues>
+            </DynVar>
+            <DynVar name="Y" description="Y_VAR" required="true" assignedType="numeric" type="numeric">
+                <DefaultValues>
+                    <Value>dd156.bi159</Value>
+                </DefaultValues>
+            </DynVar>
+            <DynVar name="SIZE" description="SIZE_VAR" required="true" assignedType="numeric" type="numeric">
+                <DefaultValues>
+                    <Value>dd156.bi163</Value>
+                </DefaultValues>
+            </DynVar>
+            <DynVar name="GROUP" description="SUBGROUP_VAR" required="false" assignedType="character" type="character">
+                <DefaultValues>
+                    <Value>dd156.bi162</Value>
+                </DefaultValues>
+            </DynVar>
+            <DynVar name="COLOR" description="COLOR_VAR" required="false" type="any"/>
+            <DynVar name="COLUMN" description="HORIZONTAL_SERIES_VAR" required="false" type="character" multiplesAllowed="true"/>
+            <DynVar name="ROW" description="VERTICAL_SERIES_VAR" required="false" type="character" multiplesAllowed="true"/>
+            <DynVar name="TIP" description="TIP_VAR" required="false" assignedType="numeric" type="any" multiplesAllowed="true">
+                <DefaultValues>
+                    <Value>dd156.bi158</Value>
+                    <Value>dd156.bi159</Value>
+                    <Value>dd156.bi162</Value>
+                </DefaultValues>
+            </DynVar>
+            <DynVar name="KEY_FRAME" description="ANIMATION" required="false" type="time" multiplesAllowed="false"/>
+            <DynVar name="HIDDEN" description="HIDDEN_VAR" required="false" type="character" multiplesAllowed="true"/>
+        </DynVars>
+    </Meta>
+    <LayoutDataMatrix cellHeightMin="1px" cellWidthMin="1px" includeMissingClass="true" rowVars="ROW" columnVars="COLUMN">
+        <LayoutPrototypeOverlay2D>
+            <BubblePlot name="BubblePlot" tipListPolicy="replace" _stmt="bubblePlot" includeMissingGroup="true" trailDisplay="BUBBLE LINE" tip="TIP" x="X" y="Y" size="SIZE" colorResponse="COLOR" group="GROUP COLOR" animationID="GROUP" colorModel="TwoColorRamp">
+                <OutlineAttrs color="Outlines:line_color"/>
+            </BubblePlot>
+            <XAxisOpts name="categoryAxis">
+                <DiscreteOpts tickValueAppearance="auto"/>
+                <LinearOpts>
+                    <TickValueFormatOpts extractScale="true"/>
+                </LinearOpts>
+            </XAxisOpts>
+            <YAxisOpts>
+                <LinearOpts>
+                    <TickValueFormatOpts extractScale="true"/>
+                </LinearOpts>
+            </YAxisOpts>
+        </LayoutPrototypeOverlay2D>
+    </LayoutDataMatrix>
+    <LayoutGlobalLegend legendTitlePosition="top" allowCollapsed="false" visible="off">
+        <SizeLegend border="false" opaque="false" extractScale="true" title_type="KEYWORD" title="AUTO">
+            <GraphNames>
+                <Value>BubblePlot</Value>
+            </GraphNames>
+        </SizeLegend>
+        <AutoLegend sortOrder="ascending">
+            <GraphNames>
+                <Value>BubblePlot</Value>
+            </GraphNames>
+        </AutoLegend>
+        <ContinuousLegend border="false" opaque="false" valueStyle="inflections" displayMissing="automatic" extractScale="true" title_type="KEYWORD" title="AUTO">
+            <GraphNames>
+                <Value>BubblePlot</Value>
+            </GraphNames>
+        </ContinuousLegend>
+    </LayoutGlobalLegend>
+    <Animation keyFrameSortOrder="ascending_unformatted" keyFrame="KEY_FRAME"/>
+    <OverviewAxis maxPlotSize="60px" minPlotSize="35px" visible="off" axis="categoryAxis"/>
+</StatGraph>]]>
+		</Graph>
+		<Table columnSizing="autoFill" resultDefinitions="dd156" name="ve157" data="dd154" applyDynamicBrushes="yes" sourceInteractionVariables="bi162">
+			<Columns>
+				<Column variable="bi158"/>
+				<Column variable="bi159"/>
+				<Column variable="bi163"/>
+				<Column variable="bi162"/>
+			</Columns>
+		</Table>
+		<Table columnSizing="autoFill" resultDefinitions="dd170" name="ve167" data="dd168" label="List table - Title 1" applyDynamicBrushes="yes" sourceInteractionVariables="bi171 bi172 bi173 bi176">
+			<EditorProperties>
+				<Property key="isAutoLabel">true</Property>
+			</EditorProperties>
+			<Columns>
+				<Column variable="bi171" isVisible="true"/>
+				<Column variable="bi172" isVisible="true"/>
+				<Column variable="bi173" isVisible="true"/>
+				<Column variable="bi174" isVisible="true" compactFormat="false"/>
+				<Column variable="bi175" isVisible="true" compactFormat="false"/>
+				<Column variable="bi176" isVisible="true"/>
+			</Columns>
+		</Table>
+		<Graph graphType="keyValue" supplementalVisuals="ve184" resultDefinitions="dd183" name="ve180" data="dd181" label="Key value - Max Cited Paper 1" applyDynamicBrushes="yes" sourceInteractionVariables="bi196">
+			<EditorProperties>
+				<Property key="isAutoLabel">true</Property>
+				<Property key="previousShowMeasureValue">true</Property>
+				<Property key="previousShowMeasureLabel">true</Property>
+				<Property key="previousShowCategoryValue">true</Property>
+				<Property key="previousShowCategoryLabel">true</Property>
+				<Property key="previousShowAggregation">false</Property>
+				<Property key="addedInteractionQueryDataItems">bi247,bi248,bi249</Property>
+			</EditorProperties>
+			<Title auto="false"><P class="styleForTitle_paragraph2"><Span class="styleForTitle_span2">Most cited paper</Span></P></Title>
+<![CDATA[<StatGraph border="false" opaque="false" missingValueDisplay="autolabel">
+    <Dimension/>
+    <PadAttrs top="0px" bottom="0px" left="0px" right="0px"/>
+    <Dimension/>
+    <Meta>
+        <DynVars>
+            <DynVar name="RESPONSE" description="MEASURE_VAR" required="true" assignedType="numeric" type="numeric">
+                <DefaultValues>
+                    <Value>dd183.bi195</Value>
+                </DefaultValues>
+            </DynVar>
+            <DynVar name="CATEGORY" description="CATEGORY_VAR" required="false" type="character"/>
+            <DynVar name="TIP" description="TIP_VAR" required="false" assignedType="character" type="any" multiplesAllowed="true">
+                <DefaultValues>
+                    <Value>dd183.bi195</Value>
+                    <Value>dd183.bi196</Value>
+                </DefaultValues>
+            </DynVar>
+            <DynVar name="HIDDEN" description="HIDDEN_VAR" required="false" type="character" multiplesAllowed="true"/>
+        </DynVars>
+    </Meta>
+    <LayoutDataPanel cellHeightMin="100px" cellWidthMin="100px" rowGutter="4px" columnGutter="6px" headerLabelDisplay="none" includeMissingClass="true" scroll="true" classVars="CATEGORY">
+        <LayoutPrototypeRegion>
+            <KeyValue name="KeyValue" tipListPolicy="replace" _stmt="keyValue" display="CATEGORYLABEL CATEGORYVALUE RESPONSEVALUE" hAlign="center" justify="center" key="responsevalue" vAlign="center" tip="TIP" category="CATEGORY" response="RESPONSE"/>
+        </LayoutPrototypeRegion>
+    </LayoutDataPanel>
+</StatGraph>]]>
+		</Graph>
+		<Graph graphType="keyValue" supplementalVisuals="ve188" resultDefinitions="dd185" name="ve189" data="dd186" label="Key value - Organization with Most Papers 1" applyDynamicBrushes="yes" sourceInteractionVariables="bi199">
+			<EditorProperties>
+				<Property key="isAutoLabel">true</Property>
+				<Property key="previousShowMeasureValue">true</Property>
+				<Property key="previousShowMeasureLabel">true</Property>
+				<Property key="previousShowCategoryValue">true</Property>
+				<Property key="previousShowCategoryLabel">true</Property>
+				<Property key="previousShowAggregation">false</Property>
+				<Property key="addedInteractionQueryDataItems">bi250,bi251</Property>
+			</EditorProperties>
+			<Title auto="false"><P class="styleForTitle_paragraph1"><Span class="styleForTitle_span1">Organization with the most papers</Span></P></Title>
+<![CDATA[<StatGraph border="false" opaque="false" missingValueDisplay="autolabel">
+    <PadAttrs top="0px" bottom="0px" left="0px" right="0px"/>
+    <Meta>
+        <DynVars>
+            <DynVar name="RESPONSE" description="MEASURE_VAR" required="true" assignedType="numeric" type="numeric">
+                <DefaultValues>
+                    <Value>dd185.bi198</Value>
+                </DefaultValues>
+            </DynVar>
+            <DynVar name="CATEGORY" description="CATEGORY_VAR" required="false" type="character"/>
+            <DynVar name="TIP" description="TIP_VAR" required="false" assignedType="character" type="any" multiplesAllowed="true">
+                <DefaultValues>
+                    <Value>dd185.bi198</Value>
+                    <Value>dd185.bi199</Value>
+                </DefaultValues>
+            </DynVar>
+            <DynVar name="HIDDEN" description="HIDDEN_VAR" required="false" type="character" multiplesAllowed="true"/>
+        </DynVars>
+    </Meta>
+    <LayoutDataPanel cellHeightMin="100px" cellWidthMin="100px" rowGutter="4px" columnGutter="6px" headerLabelDisplay="none" includeMissingClass="true" scroll="true" classVars="CATEGORY">
+        <LayoutPrototypeRegion>
+            <KeyValue name="KeyValue" tipListPolicy="replace" _stmt="keyValue" display="CATEGORYLABEL CATEGORYVALUE RESPONSEVALUE" hAlign="center" justify="center" key="responsevalue" vAlign="center" tip="TIP" category="CATEGORY" response="RESPONSE"/>
+        </LayoutPrototypeRegion>
+    </LayoutDataPanel>
+</StatGraph>]]>
+		</Graph>
+		<VisualContainer containerType="layout" name="ve192" label="Layout Container 2" selectionDisabled="true">
+			<EditorProperties>
+				<Property key="visualType">LAYOUT_CONTAINER</Property>
+			</EditorProperties>
+		</VisualContainer>
+		<Table columnSizing="autoFill" resultDefinitions="dd183" name="ve184" data="dd181" applyDynamicBrushes="yes" sourceInteractionVariables="bi196">
+			<Columns>
+				<Column variable="bi195"/>
+				<Column variable="bi196"/>
+			</Columns>
+		</Table>
+		<Table columnSizing="autoFill" resultDefinitions="dd185" name="ve188" data="dd186" applyDynamicBrushes="yes" sourceInteractionVariables="bi199">
+			<Columns>
+				<Column variable="bi198"/>
+				<Column variable="bi199"/>
+			</Columns>
+		</Table>
+		<Graph graphType="keyValue" supplementalVisuals="ve205" resultDefinitions="dd200" name="ve206" data="dd203" label="Key value - Organization with Most Papers 2" applyDynamicBrushes="yes" sourceInteractionVariables="bi216">
+			<EditorProperties>
+				<Property key="isAutoLabel">true</Property>
+				<Property key="previousShowMeasureValue">true</Property>
+				<Property key="previousShowMeasureLabel">true</Property>
+				<Property key="previousShowCategoryValue">true</Property>
+				<Property key="previousShowCategoryLabel">true</Property>
+				<Property key="previousShowAggregation">false</Property>
+				<Property key="addedInteractionQueryDataItems">bi252,bi253</Property>
+			</EditorProperties>
+			<Title auto="false"><P class="styleForTitle_paragraph3"><Span class="styleForTitle_span3">Country with the most papers</Span></P></Title>
+<![CDATA[<StatGraph border="false" opaque="false" missingValueDisplay="autolabel">
+    <PadAttrs top="0px" bottom="0px" left="0px" right="0px"/>
+    <Meta>
+        <DynVars>
+            <DynVar name="RESPONSE" description="MEASURE_VAR" required="true" assignedType="numeric" type="numeric">
+                <DefaultValues>
+                    <Value>dd200.bi202</Value>
+                </DefaultValues>
+            </DynVar>
+            <DynVar name="CATEGORY" description="CATEGORY_VAR" required="false" type="character"/>
+            <DynVar name="TIP" description="TIP_VAR" required="false" assignedType="character" type="any" multiplesAllowed="true">
+                <DefaultValues>
+                    <Value>dd200.bi202</Value>
+                    <Value>dd200.bi216</Value>
+                </DefaultValues>
+            </DynVar>
+            <DynVar name="HIDDEN" description="HIDDEN_VAR" required="false" type="character" multiplesAllowed="true"/>
+        </DynVars>
+    </Meta>
+    <LayoutDataPanel cellHeightMin="100px" cellWidthMin="100px" rowGutter="4px" columnGutter="6px" headerLabelDisplay="none" includeMissingClass="true" scroll="true" classVars="CATEGORY">
+        <LayoutPrototypeRegion>
+            <KeyValue name="KeyValue" tipListPolicy="replace" _stmt="keyValue" display="CATEGORYLABEL CATEGORYVALUE RESPONSEVALUE" hAlign="center" justify="center" key="responsevalue" vAlign="center" tip="TIP" category="CATEGORY" response="RESPONSE"/>
+        </LayoutPrototypeRegion>
+    </LayoutDataPanel>
+</StatGraph>]]>
+		</Graph>
+		<Graph graphType="keyValue" supplementalVisuals="ve213" resultDefinitions="dd208" name="ve214" data="dd211" label="Key value - Max Tweeted Paper 1" applyDynamicBrushes="yes" sourceInteractionVariables="bi218">
+			<EditorProperties>
+				<Property key="isAutoLabel">true</Property>
+				<Property key="previousShowMeasureValue">true</Property>
+				<Property key="previousShowMeasureLabel">true</Property>
+				<Property key="previousShowCategoryValue">true</Property>
+				<Property key="previousShowCategoryLabel">true</Property>
+				<Property key="previousShowAggregation">false</Property>
+				<Property key="addedInteractionQueryDataItems">bi254,bi255,bi256</Property>
+			</EditorProperties>
+			<Title auto="false"><P class="styleForTitle_paragraph4"><Span class="styleForTitle_span4">Paper with the most Tweets</Span></P></Title>
+<![CDATA[<StatGraph border="false" opaque="false" missingValueDisplay="autolabel">
+    <PadAttrs top="0px" bottom="0px" left="0px" right="0px"/>
+    <Meta>
+        <DynVars>
+            <DynVar name="RESPONSE" description="MEASURE_VAR" required="true" assignedType="numeric" type="numeric">
+                <DefaultValues>
+                    <Value>dd208.bi220</Value>
+                </DefaultValues>
+            </DynVar>
+            <DynVar name="CATEGORY" description="CATEGORY_VAR" required="false" type="character"/>
+            <DynVar name="TIP" description="TIP_VAR" required="false" assignedType="numeric" type="any" multiplesAllowed="true">
+                <DefaultValues>
+                    <Value>dd208.bi218</Value>
+                    <Value>dd208.bi220</Value>
+                </DefaultValues>
+            </DynVar>
+            <DynVar name="HIDDEN" description="HIDDEN_VAR" required="false" type="character" multiplesAllowed="true"/>
+        </DynVars>
+    </Meta>
+    <LayoutDataPanel cellHeightMin="100px" cellWidthMin="100px" rowGutter="4px" columnGutter="6px" headerLabelDisplay="none" includeMissingClass="true" scroll="true" classVars="CATEGORY">
+        <LayoutPrototypeRegion>
+            <KeyValue name="KeyValue" tipListPolicy="replace" _stmt="keyValue" display="CATEGORYLABEL CATEGORYVALUE RESPONSEVALUE" hAlign="center" justify="center" key="responsevalue" vAlign="center" tip="TIP" category="CATEGORY" response="RESPONSE"/>
+        </LayoutPrototypeRegion>
+    </LayoutDataPanel>
+</StatGraph>]]>
+		</Graph>
+		<Table columnSizing="autoFill" resultDefinitions="dd200" name="ve205" data="dd203" applyDynamicBrushes="yes" sourceInteractionVariables="bi216">
+			<Columns>
+				<Column variable="bi202"/>
+				<Column variable="bi216"/>
+			</Columns>
+		</Table>
+		<Table columnSizing="autoFill" resultDefinitions="dd208" name="ve213" data="dd211" applyDynamicBrushes="yes" sourceInteractionVariables="bi218">
+			<Columns>
+				<Column variable="bi220"/>
+				<Column variable="bi218"/>
+			</Columns>
+		</Table>
+		<Table columnSizing="autoFill" resultDefinitions="dd110" name="ve130" data="dd108" applyDynamicBrushes="yes">
+			<Columns>
+				<Column variable="bi134"/>
+				<Column variable="bi140"/>
+			</Columns>
+		</Table>
+		<Text name="ve238" label="Text 1" selectionDisabled="true" applyDynamicBrushes="no">
+			<P format="h1"><Span class="span1">Info</Span></P>
+			<P><Span>The original post that inspired this dashboard that also contains the data can be found </Span><Span><Span><Span><Span><Span action="ac242">here</Span></Span></Span></Span></Span><Span>. Please read the blog post to understand how the data was collected.</Span></P>
+			<P><Span><Span>The program to read the data into SAS can be found </Span><Span><Span action="ac243">here</Span></Span><Span>.</Span></Span></P>
+		</Text>
+	</VisualElements>
+	<PromptDefinitions>
+		<PromptDefinition data="dd144" labelVariable="bi148" valueVariable="bi148" resultDefinitions="dd146" measureVariable="bi164" name="pr147">
+			<StringConstraint/>
+		</PromptDefinition>
+	</PromptDefinitions>
+	<View>
+		<Section name="vi6" showSelectionControl="false" label="Overview">
+			<Body>
+				<MediaContainer target="mt2">
+					<ResponsiveLayout orientation="vertical" overflow="fit">
+						<Weights mediaTarget="mt5" unit="percent">
+							<Weight value="100%"/>
+						</Weights>
+						<Weights mediaTarget="mt4" unit="percent">
+							<Weight value="100%"/>
+						</Weights>
+						<Weights mediaTarget="mt3" unit="percent">
+							<Weight value="100%"/>
+						</Weights>
+					</ResponsiveLayout>
+					<Visual ref="ve143" name="vi142">
+						<ResponsiveConstraint>
+							<WidthConstraint>
+								<Width mediaTarget="mt3" preferredSizeBehavior="ignore" flexibility="flexible"/>
+							</WidthConstraint>
+							<HeightConstraint>
+								<Height mediaTarget="mt3" preferredSizeBehavior="honor" flexibility="fixed"/>
+							</HeightConstraint>
+						</ResponsiveConstraint>
+					</Visual>
+					<Container ref="ve151" name="vi150">
+						<ResponsiveConstraint>
+							<WidthConstraint>
+								<Width mediaTarget="mt3" preferredSizeBehavior="honor" flexibility="shrinkable"/>
+							</WidthConstraint>
+							<HeightConstraint>
+								<Height mediaTarget="mt3" preferredSizeBehavior="honor" flexibility="shrinkable"/>
+							</HeightConstraint>
+						</ResponsiveConstraint>
+						<ResponsiveLayout orientation="vertical" overflow="grow"/>
+						<Visual ref="ve107" name="vi106">
+							<ResponsiveConstraint>
+								<WidthConstraint>
+									<Width mediaTarget="mt3" preferredSizeBehavior="ignore" value="50%" flexibility="shrinkable"/>
+								</WidthConstraint>
+								<HeightConstraint>
+									<Height mediaTarget="mt3" preferredSizeBehavior="ignore" value="50%" flexibility="shrinkable"/>
+								</HeightConstraint>
+							</ResponsiveConstraint>
+						</Visual>
+						<Visual ref="ve153" name="vi152">
+							<ResponsiveConstraint>
+								<WidthConstraint>
+									<Width mediaTarget="mt3" preferredSizeBehavior="ignore" flexibility="flexible"/>
+								</WidthConstraint>
+								<HeightConstraint>
+									<Height mediaTarget="mt3" preferredSizeBehavior="ignore" flexibility="flexible"/>
+								</HeightConstraint>
+							</ResponsiveConstraint>
+						</Visual>
+					</Container>
+					<Container ref="ve192" name="vi191">
+						<ResponsiveConstraint>
+							<WidthConstraint>
+								<Width mediaTarget="mt3" preferredSizeBehavior="honor" flexibility="shrinkable"/>
+							</WidthConstraint>
+							<HeightConstraint>
+								<Height mediaTarget="mt3" preferredSizeBehavior="honor" flexibility="shrinkable"/>
+							</HeightConstraint>
+						</ResponsiveConstraint>
+						<ResponsiveLayout orientation="vertical" overflow="grow"/>
+						<Visual ref="ve180" name="vi179">
+							<ResponsiveConstraint>
+								<WidthConstraint>
+									<Width mediaTarget="mt3" preferredSizeBehavior="ignore" value="25%" flexibility="shrinkable"/>
+								</WidthConstraint>
+								<HeightConstraint>
+									<Height mediaTarget="mt3" preferredSizeBehavior="ignore" flexibility="flexible"/>
+								</HeightConstraint>
+							</ResponsiveConstraint>
+						</Visual>
+						<Visual ref="ve189" name="vi190">
+							<ResponsiveConstraint>
+								<WidthConstraint>
+									<Width mediaTarget="mt3" preferredSizeBehavior="ignore" value="26.51%" flexibility="shrinkable"/>
+								</WidthConstraint>
+								<HeightConstraint>
+									<Height mediaTarget="mt3" preferredSizeBehavior="ignore" flexibility="flexible"/>
+								</HeightConstraint>
+							</ResponsiveConstraint>
+						</Visual>
+						<Visual ref="ve206" name="vi207">
+							<ResponsiveConstraint>
+								<WidthConstraint>
+									<Width mediaTarget="mt3" preferredSizeBehavior="ignore" value="26.51%" flexibility="shrinkable"/>
+								</WidthConstraint>
+								<HeightConstraint>
+									<Height mediaTarget="mt3" preferredSizeBehavior="ignore" flexibility="flexible"/>
+								</HeightConstraint>
+							</ResponsiveConstraint>
+						</Visual>
+						<Visual ref="ve214" name="vi215">
+							<ResponsiveConstraint>
+								<WidthConstraint>
+									<Width mediaTarget="mt3" preferredSizeBehavior="ignore" value="26.51%" flexibility="shrinkable"/>
+								</WidthConstraint>
+								<HeightConstraint>
+									<Height mediaTarget="mt3" preferredSizeBehavior="ignore" flexibility="flexible"/>
+								</HeightConstraint>
+							</ResponsiveConstraint>
+						</Visual>
+					</Container>
+				</MediaContainer>
+			</Body>
+		</Section>
+		<HiddenSection purpose="hidden" name="vi165" label="Details">
+			<Body>
+				<MediaContainer target="mt2">
+					<ResponsiveLayout orientation="vertical" overflow="fit">
+						<Weights mediaTarget="mt5" unit="percent">
+							<Weight value="100%"/>
+						</Weights>
+						<Weights mediaTarget="mt4" unit="percent">
+							<Weight value="100%"/>
+						</Weights>
+						<Weights mediaTarget="mt3" unit="percent">
+							<Weight value="100%"/>
+						</Weights>
+					</ResponsiveLayout>
+					<Visual ref="ve167" name="vi166">
+						<ResponsiveConstraint>
+							<WidthConstraint>
+								<Width mediaTarget="mt3" preferredSizeBehavior="ignore" flexibility="flexible"/>
+							</WidthConstraint>
+							<HeightConstraint>
+								<Height mediaTarget="mt3" preferredSizeBehavior="ignore" flexibility="flexible"/>
+							</HeightConstraint>
+						</ResponsiveConstraint>
+					</Visual>
+				</MediaContainer>
+			</Body>
+		</HiddenSection>
+		<Section name="vi236" label="Info/Disclaimer">
+			<Body>
+				<MediaContainer target="mt2">
+					<ResponsiveLayout orientation="vertical" overflow="fit">
+						<Weights mediaTarget="mt5" unit="percent">
+							<Weight value="100%"/>
+						</Weights>
+						<Weights mediaTarget="mt4" unit="percent">
+							<Weight value="100%"/>
+						</Weights>
+						<Weights mediaTarget="mt3" unit="percent">
+							<Weight value="100%"/>
+						</Weights>
+					</ResponsiveLayout>
+					<Visual ref="ve238" name="vi237">
+						<ResponsiveConstraint>
+							<WidthConstraint>
+								<Width mediaTarget="mt3" preferredSizeBehavior="ignore" flexibility="flexible"/>
+							</WidthConstraint>
+							<HeightConstraint>
+								<Height mediaTarget="mt3" preferredSizeBehavior="honor" flexibility="fixed"/>
+							</HeightConstraint>
+						</ResponsiveConstraint>
+					</Visual>
+				</MediaContainer>
+			</Body>
+		</Section>
+	</View>
+	<Actions>
+		<NavigationAction type="section" value="vi165" label="Details" name="ac177"/>
+		<NavigationAction type="section" value="vi165" label="Details" name="ac178"/>
+		<NavigationAction type="url" value="https://www.zeta-alpha.com/post/must-read-the-100-most-cited-ai-papers-in-2022" label="here" name="ac242"/>
+		<NavigationAction type="url" value="https://github.com/Criptic/sas_snippets/blob/master/top-cited-parpers-2022.sas" label="here" name="ac243"/>
+	</Actions>
+	<Interactions>
+		<Interaction name="ia221" type="filter" derived="false">
+			<InteractionElementReference purpose="source" ref="ve143" variable="bi148"/>
+			<InteractionElementReference purpose="target" ref="ve107" variable="bi244"/>
+		</Interaction>
+		<Interaction name="ia222" type="filter" derived="false">
+			<InteractionElementReference purpose="source" ref="ve143" variable="bi148"/>
+			<InteractionElementReference purpose="target" ref="ve153" variable="bi245"/>
+		</Interaction>
+		<Interaction name="ia223" type="filter" derived="false">
+			<InteractionElementReference purpose="source" ref="ve143" variable="bi148"/>
+			<InteractionElementReference purpose="target" ref="ve180" variable="bi247"/>
+		</Interaction>
+		<Interaction name="ia224" type="filter" derived="false">
+			<InteractionElementReference purpose="source" ref="ve143" variable="bi148"/>
+			<InteractionElementReference purpose="target" ref="ve189" variable="bi250"/>
+		</Interaction>
+		<Interaction name="ia225" type="filter" derived="false">
+			<InteractionElementReference purpose="source" ref="ve143" variable="bi148"/>
+			<InteractionElementReference purpose="target" ref="ve206" variable="bi252"/>
+		</Interaction>
+		<Interaction name="ia226" type="filter" derived="false">
+			<InteractionElementReference purpose="source" ref="ve143" variable="bi148"/>
+			<InteractionElementReference purpose="target" ref="ve214" variable="bi254"/>
+		</Interaction>
+		<Interaction name="ia227" type="filter" derived="false">
+			<InteractionElementReference purpose="source" ref="ve107" variable="bi125"/>
+			<InteractionElementReference purpose="target" ref="ve153" variable="bi246"/>
+		</Interaction>
+		<Interaction name="ia228" type="filter" derived="false">
+			<InteractionElementReference purpose="source" ref="ve107" variable="bi125"/>
+			<InteractionElementReference purpose="target" ref="ve180" variable="bi248"/>
+		</Interaction>
+		<Interaction name="ia229" type="filter" derived="false">
+			<InteractionElementReference purpose="source" ref="ve107" variable="bi125"/>
+			<InteractionElementReference purpose="target" ref="ve189" variable="bi251"/>
+		</Interaction>
+		<Interaction name="ia230" type="filter" derived="false">
+			<InteractionElementReference purpose="source" ref="ve107" variable="bi125"/>
+			<InteractionElementReference purpose="target" ref="ve206" variable="bi216"/>
+		</Interaction>
+		<Interaction name="ia231" type="filter" derived="false">
+			<InteractionElementReference purpose="source" ref="ve107" variable="bi125"/>
+			<InteractionElementReference purpose="target" ref="ve214" variable="bi255"/>
+		</Interaction>
+		<Interaction name="ia232" type="filter" derived="false">
+			<InteractionElementReference purpose="source" ref="ve153" variable="bi162"/>
+			<InteractionElementReference purpose="target" ref="ve180" variable="bi249"/>
+		</Interaction>
+		<Interaction name="ia233" type="filter" derived="false">
+			<InteractionElementReference purpose="source" ref="ve153" variable="bi162"/>
+			<InteractionElementReference purpose="target" ref="ve189" variable="bi199"/>
+		</Interaction>
+		<Interaction name="ia234" type="filter" derived="false">
+			<InteractionElementReference purpose="source" ref="ve153" variable="bi162"/>
+			<InteractionElementReference purpose="target" ref="ve206" variable="bi253"/>
+		</Interaction>
+		<Interaction name="ia235" type="filter" derived="false">
+			<InteractionElementReference purpose="source" ref="ve153" variable="bi162"/>
+			<InteractionElementReference purpose="target" ref="ve214" variable="bi256"/>
+		</Interaction>
+	</Interactions>
+	<MediaSchemes>
+		<MediaScheme name="ms1">
+			<BaseStylesheetResource file="basems1.css" theme="opal"/>
+			<StylesheetFile file="ms1.css"/>
+		</MediaScheme>
+	</MediaSchemes>
+	<MediaTargets>
+		<MediaTarget windowSize="default" scheme="ms1" name="mt2"/>
+		<MediaTarget windowSize="small" scheme="ms1" name="mt3"/>
+		<MediaTarget windowSize="medium" scheme="ms1" name="mt4"/>
+		<MediaTarget windowSize="large" scheme="ms1" name="mt5"/>
+	</MediaTargets>
+	<Properties>
+		<Property key="displayDataSource">ds18</Property>
+		<Property key="ReportPackagesServiceVersion">2020.1.4</Property>
+		<Property key="ReportDataServiceVersion">2020.1.4</Property>
+	</Properties>
+	<Groupings>
+		<Grouping outputType="string" name="gr29">
+			<GroupingVariables>
+				<GroupingVariable variable="var28" type="string"/>
+			</GroupingVariables>
+			<Group>
+				<ValueExpression>&apos;Australia&apos;</ValueExpression>
+				<TestExpression>in(${var28,binned},&apos;Australia&apos;)</TestExpression>
+			</Group>
+			<Group>
+				<ValueExpression>&apos;Canada&apos;</ValueExpression>
+				<TestExpression>in(${var28,binned},&apos;Canada, Canada&apos;)</TestExpression>
+			</Group>
+			<Group>
+				<ValueExpression>&apos;China&apos;</ValueExpression>
+				<TestExpression>in(${var28,binned},&apos;China&apos;,&apos;China, China&apos;,&apos;Hong Kong&apos;)</TestExpression>
+			</Group>
+			<Group>
+				<ValueExpression>&apos;Denmark&apos;</ValueExpression>
+				<TestExpression>in(${var28,binned},&apos;Denmark, Switzerland&apos;)</TestExpression>
+			</Group>
+			<Group>
+				<ValueExpression>&apos;Switzerland&apos;</ValueExpression>
+				<TestExpression>in(${var28,binned},&apos;Switzerland&apos;)</TestExpression>
+			</Group>
+			<Group>
+				<ValueExpression>&apos;United Kingdom&apos;</ValueExpression>
+				<TestExpression>in(${var28,binned},&apos;UK&apos;,&apos;UK, USA&apos;)</TestExpression>
+			</Group>
+			<Group>
+				<ValueExpression>&apos;United States&apos;</ValueExpression>
+				<TestExpression>in(${var28,binned},&apos;USA&apos;,&apos;USA, USA&apos;)</TestExpression>
+			</Group>
+			<Group>
+				<ValueExpression>&apos;Germany&apos;</ValueExpression>
+				<TestExpression>in(${var28,binned},&apos;Germany&apos;)</TestExpression>
+			</Group>
+			<Group>
+				<ValueExpression>&apos;France&apos;</ValueExpression>
+				<TestExpression>in(${var28,binned},&apos;France&apos;)</TestExpression>
+			</Group>
+			<Group>
+				<ValueExpression>&apos;India&apos;</ValueExpression>
+				<TestExpression>in(${var28,binned},&apos;India&apos;)</TestExpression>
+			</Group>
+			<Group>
+				<ValueExpression>&apos;South Korea&apos;</ValueExpression>
+				<TestExpression>in(${var28,binned},&apos;South Korea, South Korea&apos;)</TestExpression>
+			</Group>
+			<Group>
+				<ValueExpression>&apos;Singapore&apos;</ValueExpression>
+				<TestExpression>in(${var28,binned},&apos;Singapore&apos;)</TestExpression>
+			</Group>
+			<Group>
+				<ValueExpression>&apos;Netherlands&apos;</ValueExpression>
+				<TestExpression>in(${var28,binned},&apos;Netherlands&apos;)</TestExpression>
+			</Group>
+			<Group>
+				<ValueExpression>&apos;Ireland&apos;</ValueExpression>
+				<TestExpression>in(${var28,binned},&apos;Ireland&apos;)</TestExpression>
+			</Group>
+			<Group>
+				<ValueExpression>&apos;Japan&apos;</ValueExpression>
+				<TestExpression>in(${var28,binned},&apos;Japan&apos;)</TestExpression>
+			</Group>
+			<Group>
+				<ValueExpression>&apos;Israel&apos;</ValueExpression>
+				<TestExpression>in(${var28,binned},&apos;Israel&apos;)</TestExpression>
+			</Group>
+			<Other>
+				<ValueExpression>&apos; &apos;</ValueExpression>
+			</Other>
+		</Grouping>
+		<Grouping outputType="string" name="gr92">
+			<GroupingVariables>
+				<GroupingVariable variable="var91" type="string"/>
+			</GroupingVariables>
+			<Group>
+				<ValueExpression>&apos;Australia&apos;</ValueExpression>
+				<TestExpression>in(${var91,binned},&apos;Australia&apos;)</TestExpression>
+			</Group>
+			<Group>
+				<ValueExpression>&apos;North America&apos;</ValueExpression>
+				<TestExpression>in(${var91,binned},&apos;Canada, Canada&apos;,&apos;USA&apos;,&apos;USA, USA&apos;)</TestExpression>
+			</Group>
+			<Group>
+				<ValueExpression>&apos;Asia&apos;</ValueExpression>
+				<TestExpression>in(${var91,binned},&apos;China&apos;,&apos;Japan&apos;,&apos;Singapore&apos;,&apos;South Korea, South Korea&apos;,&apos;Israel&apos;,&apos;India&apos;,&apos;Hong Kong&apos;,&apos;China, China&apos;)</TestExpression>
+			</Group>
+			<Group>
+				<ValueExpression>&apos;Europe&apos;</ValueExpression>
+				<TestExpression>in(${var91,binned},&apos;Denmark, Switzerland&apos;,&apos;Switzerland&apos;,&apos;UK&apos;,&apos;UK, USA&apos;,&apos;Ireland&apos;,&apos;Germany&apos;,&apos;Netherlands&apos;,&apos;France&apos;)</TestExpression>
+			</Group>
+			<Other>
+				<ValueExpression>&apos; &apos;</ValueExpression>
+			</Other>
+		</Grouping>
+		<Grouping outputType="string" name="gr94">
+			<GroupingVariables>
+				<GroupingVariable variable="var28" type="string"/>
+			</GroupingVariables>
+			<Group>
+				<ValueExpression>&apos;Australia&apos;</ValueExpression>
+				<TestExpression>in(${var28,binned},&apos;Australia&apos;)</TestExpression>
+			</Group>
+			<Group>
+				<ValueExpression>&apos;Canada&apos;</ValueExpression>
+				<TestExpression>in(${var28,binned},&apos;Canada, Canada&apos;)</TestExpression>
+			</Group>
+			<Group>
+				<ValueExpression>&apos;China&apos;</ValueExpression>
+				<TestExpression>in(${var28,binned},&apos;China&apos;,&apos;China, China&apos;,&apos;Hong Kong&apos;)</TestExpression>
+			</Group>
+			<Group>
+				<ValueExpression>&apos;Denmark&apos;</ValueExpression>
+				<TestExpression>in(${var28,binned},&apos;Denmark, Switzerland&apos;)</TestExpression>
+			</Group>
+			<Group>
+				<ValueExpression>&apos;Switzerland&apos;</ValueExpression>
+				<TestExpression>in(${var28,binned},&apos;Switzerland&apos;)</TestExpression>
+			</Group>
+			<Group>
+				<ValueExpression>&apos;United Kingdom&apos;</ValueExpression>
+				<TestExpression>in(${var28,binned},&apos;UK&apos;,&apos;UK, USA&apos;)</TestExpression>
+			</Group>
+			<Group>
+				<ValueExpression>&apos;United States&apos;</ValueExpression>
+				<TestExpression>in(${var28,binned},&apos;USA&apos;,&apos;USA, USA&apos;)</TestExpression>
+			</Group>
+			<Group>
+				<ValueExpression>&apos;Germany&apos;</ValueExpression>
+				<TestExpression>in(${var28,binned},&apos;Germany&apos;)</TestExpression>
+			</Group>
+			<Group>
+				<ValueExpression>&apos;France&apos;</ValueExpression>
+				<TestExpression>in(${var28,binned},&apos;France&apos;)</TestExpression>
+			</Group>
+			<Group>
+				<ValueExpression>&apos;India&apos;</ValueExpression>
+				<TestExpression>in(${var28,binned},&apos;India&apos;)</TestExpression>
+			</Group>
+			<Group>
+				<ValueExpression>&apos;South Korea&apos;</ValueExpression>
+				<TestExpression>in(${var28,binned},&apos;South Korea, South Korea&apos;)</TestExpression>
+			</Group>
+			<Group>
+				<ValueExpression>&apos;Singapore&apos;</ValueExpression>
+				<TestExpression>in(${var28,binned},&apos;Singapore&apos;)</TestExpression>
+			</Group>
+			<Group>
+				<ValueExpression>&apos;Netherlands&apos;</ValueExpression>
+				<TestExpression>in(${var28,binned},&apos;Netherlands&apos;)</TestExpression>
+			</Group>
+			<Group>
+				<ValueExpression>&apos;Ireland&apos;</ValueExpression>
+				<TestExpression>in(${var28,binned},&apos;Ireland&apos;)</TestExpression>
+			</Group>
+			<Group>
+				<ValueExpression>&apos;Japan&apos;</ValueExpression>
+				<TestExpression>in(${var28,binned},&apos;Japan&apos;)</TestExpression>
+			</Group>
+			<Group>
+				<ValueExpression>&apos;Israel&apos;</ValueExpression>
+				<TestExpression>in(${var28,binned},&apos;Israel&apos;)</TestExpression>
+			</Group>
+			<Other>
+				<ValueExpression>&apos; &apos;</ValueExpression>
+			</Other>
+		</Grouping>
+	</Groupings>
+	<ExportProperties>
+		<Export destination="pdf">
+			<Property key="showCoverPage" value="true"></Property>
+			<Property key="showPageNumbers" value="true"></Property>
+		</Export>
+	</ExportProperties>
+	<History>
+	<Versions>
+		<Version key="4.28.0" lastDate="2023-03-06T00:00:00Z"/>
+	</Versions>
+	<Editors>
+		<Editor applicationName="VA">
+			<Revision editorVersion="2023.02" lastDate="2023-03-06T09:05:30.821Z"/>
+		</Editor>
+	</Editors>
+</History>
+	<SASReportState date="2023-03-06T08:59:04Z">
+		<VisualElements>
+			<GraphState element="ve107">
+				<RendererStates>
+					<LayoutOverlayMap/>
+				</RendererStates>
+			</GraphState>
+		</VisualElements>
+		<View/>
+	</SASReportState>
+</SASReport>

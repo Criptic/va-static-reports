@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<metadataSupplement>
+    <tables>
+        <table dataLocale="en_US" dataSources="ds18" resourceIdentifier="'cas-shared-default','CASUSER','TOP_CITED_2022','en_US'" tableModifiedTimeStamp="2023-03-06T08:27:28.788Z">
+            <columns>
+                <column dataType="string" label="Title" xref="Title"/>
+                <column dataType="double" format="F8." label="Tweets" xref="Tweets"/>
+                <column dataType="double" format="F8." label="Citations" xref="Citations"/>
+                <column dataType="string" label="Organizations" xref="Organizations"/>
+                <column dataType="string" label="Countries" xref="Countries"/>
+                <column dataType="string" label="Org_Types" xref="Org_Types"/>
+            </columns>
+        </table>
+    </tables>
+    <version>2</version>
+</metadataSupplement>
