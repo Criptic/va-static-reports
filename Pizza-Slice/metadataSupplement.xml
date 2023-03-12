@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<metadataSupplement>
+    <tables>
+        <table dataLocale="en_US" dataSources="ds7" resourceIdentifier="'cas-shared-default','CASUSER','PIZZA2','en_US'" tableModifiedTimeStamp="2023-01-12T07:59:36.166Z">
+            <columns>
+                <column dataType="string" label="day" xref="day"/>
+                <column dataType="string" label="month" xref="month"/>
+                <column dataType="string" label="year1" xref="year1"/>
+                <column dataType="string" label="date2" xref="date2"/>
+                <column dataType="string" label="Link to IG Post" xref="Link to IG Post"/>
+                <column dataType="string" label="Name" xref="Name"/>
+                <column dataType="double" format="BEST12." label="location_lat" xref="location_lat"/>
+                <column dataType="double" format="BEST12." label="location_lng" xref="location_lng"/>
+                <column dataType="string" label="Date" xref="Date"/>
+                <column dataType="string" label="Date Expanded (times in EST)" xref="Date Expanded (times in EST)"/>
+                <column dataType="double" format="BEST12." label="Year" xref="Year"/>
+                <column dataType="double" format="BEST12." label="Price as number" xref="Price as number"/>
+                <column dataType="double" format="F12." label="Price" xref="Price"/>
+                <column dataType="string" label="Style" xref="Style"/>
+                <column dataType="string" label="Notes" xref="Notes"/>
+            </columns>
+        </table>
+    </tables>
+    <version>2</version>
+</metadataSupplement>
