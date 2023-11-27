@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Project Summary</title>
+        <style>
+            body {
+                margin: 5%;
+            }
+            /* Summary Table Style */
+            .insightsSummaryTableKey {
+                font-weight: bold;
+                margin-left: 5%;
+            }
+
+            td {
+                text-align: left;
+                padding: 8px;
+                margin-right: 5%;
+            }
+
+            tr:nth-child(even) {
+                background-color: #dddddd;
+            }
+
+            /* Spinner Style */
+            .lds-spinner {
+                color: hsl(212, 94%, 31%);
+                display: inline-block;
+                position: relative;
+                width: 80px;
+                height: 80px;
+            }
+            .lds-spinner div {
+                transform-origin: 40px 40px;
+                animation: lds-spinner 1.2s linear infinite;
+            }
+            .lds-spinner div:after {
+                content: ' ';
+                display: block;
+                position: absolute;
+                top: 3px;
+                left: 37px;
+                width: 6px;
+                height: 18px;
+                border-radius: 20%;
+                background: hsl(212, 94%, 31%);
+            }
+            .lds-spinner div:nth-child(1) {
+                transform: rotate(0deg);
+                animation-delay: -1.1s;
+            }
+            .lds-spinner div:nth-child(2) {
+                transform: rotate(30deg);
+                animation-delay: -1s;
+            }
+            .lds-spinner div:nth-child(3) {
+                transform: rotate(60deg);
+                animation-delay: -0.9s;
+            }
+            .lds-spinner div:nth-child(4) {
+                transform: rotate(90deg);
+                animation-delay: -0.8s;
+            }
+            .lds-spinner div:nth-child(5) {
+                transform: rotate(120deg);
+                animation-delay: -0.7s;
+            }
+            .lds-spinner div:nth-child(6) {
+                transform: rotate(150deg);
+                animation-delay: -0.6s;
+            }
+            .lds-spinner div:nth-child(7) {
+                transform: rotate(180deg);
+                animation-delay: -0.5s;
+            }
+            .lds-spinner div:nth-child(8) {
+                transform: rotate(210deg);
+                animation-delay: -0.4s;
+            }
+            .lds-spinner div:nth-child(9) {
+                transform: rotate(240deg);
+                animation-delay: -0.3s;
+            }
+            .lds-spinner div:nth-child(10) {
+                transform: rotate(270deg);
+                animation-delay: -0.2s;
+            }
+            .lds-spinner div:nth-child(11) {
+                transform: rotate(300deg);
+                animation-delay: -0.1s;
+            }
+            .lds-spinner div:nth-child(12) {
+                transform: rotate(330deg);
+                animation-delay: 0s;
+            }
+            @keyframes lds-spinner {
+                0% {
+                    opacity: 1;
+                }
+                100% {
+                    opacity: 0;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="lds-spinner" id="loadingSpinner" style="display: none">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div id="projectSummary"></div>
+        <script>
+            // Get target interaction elements
+            const PROJECTSUMMARYCONTAINER =
+                document.getElementById('projectSummary');
+            const LOADINGSPINNER = document.getElementById('loadingSpinner');
+
+            // Catch data input from SAS Visual Analytics
+            if (window.addEventListener) {
+                // For standards-compliant web browsers
+                window.addEventListener('message', onMessage, false);
+            } else {
+                window.attachEvent('onmessage', onMessage);
+            }
+
+            // Retrieve data and begin processing
+            function onMessage(event) {
+                if (
+                    event &&
+                    event.data &&
+                    event.data.columns.length <= 1 &&
+                    event.data.rowCount === 1
+                ) {
+                    getProjectSummary(event.data.data[0][0]);
+                } else {
+                    PROJECTSUMMARYCONTAINER.innerHTML =
+                        '<p style="color: red">ERROR: Please only pass one row and one column that contains the Analytics Project ID you want the summary report for!';
+                }
+            }
+
+            /**
+             * Get the project summary from a SAS analytics project
+             * Note this function writes it output to the PROJECTSUMMARYCONTAINER element
+             *  and it sets the LOADINGSPINNER to display
+             *
+             * @param {String} projectID - ID of the SAS analytics project
+             */
+            function getProjectSummary(projectID) {
+                try {
+                    PROJECTSUMMARYCONTAINER.innerHTML = 'Loading...';
+                    LOADINGSPINNER.style.display = 'block';
+                    const FOLDERCONTENT = fetch(
+                        `${window.origin}/dataMiningProjectResources/projects/${projectID}/summaryReports`,
+                        {
+                            // mode: 'no-cors',
+                            method: 'get',
+                            headers: {
+                                Accept: 'application/json',
+                            },
+                        }
+                    ).then((response) => {
+                        response.json().then((res) => {
+                            console.log(res);
+
+                            LOADINGSPINNER.style.display = 'none';
+                            PROJECTSUMMARYCONTAINER.innerHTML =
+                                res.items[0].data[0].dataMap.contents;
+                        });
+                    });
+                } catch {
+                    PROJECTSUMMARYCONTAINER.innerHTML = `Unable to retrieve a Project Summary for <a href="${window.origin}/SASModelStudio/?projectUrl=/analyticsGateway/projects/${projectID}>your project</a>."`;
+                }
+            }
+        </script>
+    </body>
+</html>
