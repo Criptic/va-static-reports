@@ -120,7 +120,10 @@
             <div></div>
             <div></div>
         </div>
-        <div id="projectSummary"></div>
+        <div id="projectSummary">
+            This object takes a SAS Analytics Project ID as an input - ensure
+            that I pass only one ID at a time to the Data Driven Content object.
+        </div>
         <script>
             // Get target interaction elements
             const PROJECTSUMMARYCONTAINER =
@@ -176,13 +179,20 @@
                     ).then((response) => {
                         response.json().then((res) => {
                             LOADINGSPINNER.style.display = 'none';
-                            PROJECTSUMMARYCONTAINER.innerHTML =
-                                res.items[0].data[0].dataMap.contents;
+                            if (
+                                res?.items[0]?.data[0]?.dataMap?.contents ===
+                                undefined
+                            ) {
+                                PROJECTSUMMARYCONTAINER.innerHTML = `Unable to retrieve a Project Summary for <a href="${VIYAHOST}/SASModelStudio/?projectUrl=/analyticsGateway/projects/${projectID}">your project</a>.`;
+                            } else {
+                                PROJECTSUMMARYCONTAINER.innerHTML =
+                                    res.items[0].data[0].dataMap.contents;
+                            }
                         });
                     });
                 } catch {
                     LOADINGSPINNER.style.display = 'none';
-                    PROJECTSUMMARYCONTAINER.innerHTML = `Unable to retrieve a Project Summary for <a href="${VIYAHOST}/SASModelStudio/?projectUrl=/analyticsGateway/projects/${projectID}>your project</a>."`;
+                    PROJECTSUMMARYCONTAINER.innerHTML = `Unable to retrieve a Project Summary for <a href="${VIYAHOST}/SASModelStudio/?projectUrl=/analyticsGateway/projects/${projectID}">your project</a>.`;
                 }
             }
         </script>
