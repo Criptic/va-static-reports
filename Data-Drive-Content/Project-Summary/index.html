@@ -127,6 +127,9 @@
                 document.getElementById('projectSummary');
             const LOADINGSPINNER = document.getElementById('loadingSpinner');
 
+            // Get SAS Viya Host
+            const VIYAHOST = window.parent.origin;
+
             // Catch data input from SAS Visual Analytics
             if (window.addEventListener) {
                 // For standards-compliant web browsers
@@ -162,7 +165,7 @@
                     PROJECTSUMMARYCONTAINER.innerHTML = 'Loading...';
                     LOADINGSPINNER.style.display = 'block';
                     const FOLDERCONTENT = fetch(
-                        `${window.origin}/dataMiningProjectResources/projects/${projectID}/summaryReports`,
+                        `${VIYAHOST}/dataMiningProjectResources/projects/${projectID}/summaryReports`,
                         {
                             // mode: 'no-cors',
                             method: 'get',
@@ -172,15 +175,14 @@
                         }
                     ).then((response) => {
                         response.json().then((res) => {
-                            console.log(res);
-
                             LOADINGSPINNER.style.display = 'none';
                             PROJECTSUMMARYCONTAINER.innerHTML =
                                 res.items[0].data[0].dataMap.contents;
                         });
                     });
                 } catch {
-                    PROJECTSUMMARYCONTAINER.innerHTML = `Unable to retrieve a Project Summary for <a href="${window.origin}/SASModelStudio/?projectUrl=/analyticsGateway/projects/${projectID}>your project</a>."`;
+                    LOADINGSPINNER.style.display = 'none';
+                    PROJECTSUMMARYCONTAINER.innerHTML = `Unable to retrieve a Project Summary for <a href="${VIYAHOST}/SASModelStudio/?projectUrl=/analyticsGateway/projects/${projectID}>your project</a>."`;
                 }
             }
         </script>
