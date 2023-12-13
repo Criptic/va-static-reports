@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<metadataSupplement>
+    <tables>
+        <table dataLocale="en_US" dataSources="ds7" resourceIdentifier="'cas-shared-default','CASUSER','NETFLIX_ENGAGEMENT_REPORT_TOP750','en_US'" tableModifiedTimeStamp="2023-12-13T10:52:38.604Z">
+            <columns>
+                <column dataType="double" format="BEST12." label="The rank of the title" xref="Rank"/>
+                <column dataType="double" format="BEST12." label="Just the year from the release date" xref="year"/>
+                <column dataType="string" label="Name of the Movie/Show" xref="Title"/>
+                <column dataType="string" label="Is the title globally available" xref="AvailableGlobally"/>
+                <column dataType="date" format="YYMMDD8" label="Release Date of the title" xref="ReleaseDate"/>
+                <column dataType="double" format="COMMA15." label="Number of hours the title was viewed" xref="HoursViewed"/>
+                <column dataType="string" label="TitleWithoutColon" xref="TitleWithoutColon"/>
+                <column dataType="double" format="BEST12." label="SeasonNumber" xref="SeasonNumber"/>
+                <column dataType="string" label="Rated" xref="Rated"/>
+                <column dataType="string" label="Runtime" xref="Runtime"/>
+                <column dataType="string" label="Genre" xref="Genre"/>
+                <column dataType="string" label="Plot" xref="Plot"/>
+                <column dataType="string" label="Language" xref="Language"/>
+                <column dataType="string" label="Country" xref="Country"/>
+                <column dataType="string" label="Poster" xref="Poster"/>
+                <column dataType="string" label="IMDBRating" xref="IMDBRating"/>
+                <column dataType="string" label="IMDBVotes" xref="IMDBVotes"/>
+                <column dataType="string" label="Type" xref="Type"/>
+                <column dataType="string" label="IMDBLink" xref="IMDBLink"/>
+            </columns>
+        </table>
+        <table dataLocale="en_US" dataSources="ds180" resourceIdentifier="'cas-shared-default','CASUSER','NETFLIX_ENGAGEMENT_REPORT','en_US'" tableModifiedTimeStamp="2023-12-13T10:52:38.275Z">
+            <columns>
+                <column dataType="double" format="BEST12." label="The rank of the title" xref="Rank"/>
+                <column dataType="double" format="BEST12." label="Just the year from the release date" xref="year"/>
+                <column dataType="string" label="Name of the Movie/Show" xref="Title"/>
+                <column dataType="string" label="Is the title globally available" xref="AvailableGlobally"/>
+                <column dataType="date" format="YYMMDD8" label="Release Date of the title" xref="ReleaseDate"/>
+                <column dataType="double" format="COMMA15." label="Number of hours the title was viewed" xref="HoursViewed"/>
+                <column dataType="double" format="BEST12." label="SeasonNumber" xref="SeasonNumber"/>
+            </columns>
+        </table>
+    </tables>
+    <version>2</version>
+</metadataSupplement>
