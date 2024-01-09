@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Network Analysis Object</title>
+        <script
+            async
+            src="https://cdn.developer.sas.com/packages/va-report-components/latest/dist/umd/va-report-components.js"
+        ></script>
+        <style>
+            body {
+                margin: 0px;
+                padding: 0px;
+            }
+
+            #sasReportContainer,
+            sas-report,
+            sas-report-page,
+            sas-report-object {
+                width: 100vw;
+                height: 85vh;
+            }
+
+            .button {
+                margin-bottom: 10px;
+                width: 10%;
+                padding: 8px;
+                box-sizing: border-box;
+            }
+
+            #textContainer {
+                display: flex;
+                width: 100%;
+                height: 85vh;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                font-size: x-large;
+                font-weight: 900;
+            }
+        </style>
+    </head>
+    <body role="main">
+        <div id="sasReportContainer">
+            <div id="textContainer">
+                <p>
+                    Welcome to this interactive audio visuell report expierence
+                    powered by SAS Visual Analytics
+                </p>
+                <br />
+                <p>
+                    You can start the expierence by clicking on play below - it
+                    takes around 8 minutes in total.
+                </p>
+            </div>
+            <!--<sas-report packageUri="." pageName="vi6"></sas-report>-->
+        </div>
+
+        <div style="padding-left: 16px">
+            Find out more about this by checking out my accompanying
+            <a
+                href="https://davidweik.substack.com/p/learning-how-to-use-the-network-analysis-object"
+                >blog post</a
+            >. This expierence has been created by David Weik. Use the buttons
+            to skip through the expierence.
+        </div>
+        <div style="padding-left: 16px" id="buttonContainer"></div>
+        <audio id="audioPlayer" style="padding-left: 16px" controls>
+            <source src="./LHTUTNAO.mp3" type="audio/mpeg" />
+            Your browser does not support the audio element.
+        </audio>
+
+        <script>
+            const BACKGROUNDCOLORHIGHLIGHT = '#2A3037';
+            const BACKGROUNDCOLORDEFAULT = '#FFFFFF';
+            const AUDIOPLAYER = document.getElementById('audioPlayer');
+            const SASREPORTCONTAINER =
+                document.getElementById('sasReportContainer');
+            const BUTTONCONTAINER = document.getElementById('buttonContainer');
+
+            const EVENTS = {
+                1: {
+                    start: 35,
+                    end: 62,
+                    name: 'Intro',
+                    add: 'vi6',
+                    click: null,
+                    color: null,
+                },
+                2: {
+                    start: 63,
+                    end: 92,
+                    name: 'Ungrouped Network - Intro',
+                    add: null,
+                    click: {
+                        index: 1,
+                    },
+                    color: {
+                        index: 1,
+                        container: true,
+                        bgColor: BACKGROUNDCOLORHIGHLIGHT,
+                    },
+                },
+                3: {
+                    start: 93,
+                    end: 111,
+                    name: null,
+                    add: null,
+                    click: {
+                        index: 2,
+                    },
+                    color: {
+                        index: 2,
+                        container: true,
+                        bgColor: BACKGROUNDCOLORHIGHLIGHT,
+                    },
+                },
+                4: {
+                    start: 112,
+                    end: 120,
+                    name: 'Ungrouped Network - Option',
+                    add: 'vi291',
+                    click: null,
+                    color: null,
+                },
+                5: {
+                    start: 121,
+                    end: 124,
+                    name: null,
+                    add: null,
+                    click: null,
+                    color: {
+                        index: 1,
+                        container: false,
+                        bgColor: BACKGROUNDCOLORHIGHLIGHT,
+                    },
+                },
+                6: {
+                    start: 125,
+                    end: 138,
+                    name: null,
+                    add: null,
+                    click: null,
+                    color: {
+                        index: 2,
+                        container: false,
+                        bgColor: BACKGROUNDCOLORHIGHLIGHT,
+                    },
+                },
+                7: {
+                    start: 139,
+                    end: 186,
+                    name: 'Ungrouped Network - Roles',
+                    add: 'vi780',
+                    click: null,
+                    color: null,
+                },
+                8: {
+                    start: 187,
+                    end: 220,
+                    name: 'Ungrouped Network - Action',
+                    add: 'vi904',
+                    click: null,
+                    color: null,
+                },
+                9: {
+                    start: 221,
+                    end: 242,
+                    name: 'Hierarchical Network - Intro',
+                    add: 'vi972',
+                    click: null,
+                    color: null,
+                },
+                10: {
+                    start: 243,
+                    end: 245,
+                    name: null,
+                    add: null,
+                    click: null,
+                    color: {
+                        index: 1,
+                        container: false,
+                        bgColor: BACKGROUNDCOLORHIGHLIGHT,
+                    },
+                },
+                11: {
+                    start: 246,
+                    end: 260,
+                    name: null,
+                    add: null,
+                    click: null,
+                    color: {
+                        index: 2,
+                        container: false,
+                        bgColor: BACKGROUNDCOLORHIGHLIGHT,
+                    },
+                },
+                12: {
+                    start: 261,
+                    end: 265,
+                    name: 'Exploring Measures',
+                    add: 'vi510',
+                    click: null,
+                    color: null,
+                },
+                13: {
+                    start: 266,
+                    end: 282,
+                    name: null,
+                    add: null,
+                    click: {
+                        index: 1,
+                    },
+                    color: null,
+                },
+                14: {
+                    start: 283,
+                    end: 300,
+                    name: null,
+                    add: null,
+                    click: {
+                        index: 2,
+                    },
+                    color: null,
+                },
+                15: {
+                    start: 301,
+                    end: 337,
+                    name: null,
+                    add: null,
+                    click: {
+                        index: 3,
+                    },
+                    color: null,
+                },
+                16: {
+                    start: 338,
+                    end: 358,
+                    name: null,
+                    add: null,
+                    click: {
+                        index: 4,
+                    },
+                    color: null,
+                },
+                17: {
+                    start: 359,
+                    end: 382,
+                    name: null,
+                    add: null,
+                    click: {
+                        index: 5,
+                    },
+                    color: null,
+                },
+                18: {
+                    start: 383,
+                    end: 468,
+                    name: 'Geographical Network',
+                    add: 'vi294',
+                    click: null,
+                    color: null,
+                },
+                19: {
+                    start: 469,
+                    end: 488,
+                    name: 'Outro',
+                    add: '.',
+                    click: null,
+                    color: null,
+                },
+            };
+
+            // Add buttons
+            for (const EVENTIDX in EVENTS) {
+                if (EVENTS[EVENTIDX]['name'] != null) {
+                    const ADDITIONALBUTTON = document.createElement('button');
+                    ADDITIONALBUTTON.type = 'button';
+                    ADDITIONALBUTTON.className = 'button';
+                    ADDITIONALBUTTON.innerText = EVENTS[EVENTIDX]['name'];
+                    ADDITIONALBUTTON.addEventListener('click', () => {
+                        jumpToTimeStamp(EVENTS[EVENTIDX]['start']);
+                    });
+                    BUTTONCONTAINER.appendChild(ADDITIONALBUTTON);
+                }
+            }
+
+            // Track the currently active action
+            let currentAction = 0;
+
+            // Used for the buttons so that users can jump around
+            function jumpToTimeStamp(time) {
+                console.log(time);
+                AUDIOPLAYER.currentTime = time;
+            }
+
+            // Used to replace the current display with a new SAS element
+            function addVAElement(elementName) {
+                let newVAElement;
+                if (elementName.substring(0, 2) === 'vi') {
+                    // Add a page
+                    newVAElement = document.createElement('sas-report-page');
+                    newVAElement.setAttribute('pageName', elementName);
+                } else if (elementName.substring(0, 2) === 've') {
+                    // Add an object
+                    newVAElement = document.createElement('sas-report-object');
+                    newVAElement.setAttribute('objectName', elementName);
+                } else {
+                    // Add full report
+                    newVAElement = document.createElement('sas-report');
+                }
+
+                newVAElement.setAttribute('packageUri', '.');
+                SASREPORTCONTAINER.innerHTML = '';
+                SASREPORTCONTAINER.appendChild(newVAElement);
+            }
+
+            // Used to click on the n-th stacking container button on a page
+            // The smallest possible index is 1
+            function clickStackingContainerButton(index) {
+                document
+                    .querySelector(
+                        `#sasReportContainer > sas-report-page > div > div > div > div > div > div:nth-child(2) > div > div > div > div > div > div > div > div > div:nth-child(1) > div > div:nth-child(${index}) > div > button`
+                    )
+                    .click();
+            }
+
+            // Set the background color of a canvas element
+            // If you specify the stackingContainer = true then the index is the index of the button
+            function setBackgroundColor(
+                index,
+                stackingContainer = false,
+                color = BACKGROUNDCOLORHIGHLIGHT
+            ) {
+                if (stackingContainer === true) {
+                    document.querySelector(
+                        `#sasReportContainer > sas-report-page > div > div > div > div > div > div:nth-child(2) > div > div > div > div > div > div > div > div > div:nth-child(2) > div:nth-child(${index}) > div > div:nth-child(1) > div > div > div`
+                    ).style.backgroundColor = color;
+                } else {
+                    document.querySelector(
+                        `#sasReportContainer > sas-report-page > div > div > div > div > div > div:nth-child(2) > div > div > div > div > div > div > div > div > div:nth-child(${index}) > div:nth-child(1) > div > div:nth-child(2) > div`
+                    ).style.backgroundColor = color;
+                }
+            }
+
+            // Reset the action if the user pauses so that you can return to the correct place
+            AUDIOPLAYER.addEventListener('pause', () => {
+                currentAction = 0;
+            });
+
+            AUDIOPLAYER.addEventListener('timeupdate', () => {
+                const CURRENTTIME = Math.floor(AUDIOPLAYER.currentTime);
+
+                // Reset the action if the user resets the audio
+                if (CURRENTTIME === 0) {
+                    currentAction = 0;
+                }
+
+                for (let eventID in EVENTS) {
+                    let start = EVENTS[eventID]['start'];
+                    let end = EVENTS[eventID]['end'];
+
+                    if (CURRENTTIME >= start && CURRENTTIME <= end) {
+                        if (currentAction != eventID) {
+                            const EVENT = EVENTS[eventID];
+                            // Ensure the action is only triggered once
+                            currentAction = eventID;
+                            // Add the corresponding VA Element
+                            if (EVENT['add'] != null) {
+                                addVAElement(EVENT['add']);
+                            }
+
+                            // Timeout set for 2 seconds to ensure the VA object has finished loading
+                            setTimeout(() => {
+                                // Check if a Stack Container Button should be clicked
+                                if (EVENT['click'] != null) {
+                                    clickStackingContainerButton(
+                                        EVENT['click']['index']
+                                    );
+                                }
+                                // Check if the background color should be set
+                                if (EVENT['color'] != null) {
+                                    setBackgroundColor(
+                                        EVENT['color']['index'],
+                                        EVENT['color']['container'],
+                                        EVENT['color']['bgColor']
+                                    );
+                                }
+                            }, 2000);
+                        }
+                    }
+                }
+            });
+        </script>
+    </body>
+</html>

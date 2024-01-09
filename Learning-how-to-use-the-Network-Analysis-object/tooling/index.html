@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>HTML Parser</title>
+    </head>
+    <body>
+        <input type="file" id="fileInput" accept=".html" />
+        <button onclick="parseHTML()">Parse</button>
+        <div id="parsedResult"></div>
+
+        <script>
+            function parseULToList(ulElement) {
+                const listItems = Array.from(ulElement.querySelectorAll('li'));
+
+                return listItems.map((li) => {
+                    const name = li.textContent
+                        .trim()
+                        .replace(/\n/g, '')
+                        .replace(/            /g, ' - ')
+                        .replace(/ -  - /g, ' - ');
+                    const dataElement = li.getAttribute('data-element');
+
+                    const ulChild = li.querySelector('ul');
+                    let children = [];
+                    if (ulChild) {
+                        children = parseULToList(ulChild);
+                    }
+
+                    return { name, dataElement, children };
+                });
+            }
+
+            function parseHTML() {
+                const fileInput = document.getElementById('fileInput');
+                const parsedResult = document.getElementById('parsedResult');
+
+                if (
+                    !fileInput ||
+                    !fileInput.files ||
+                    fileInput.files.length === 0
+                ) {
+                    parsedResult.textContent = 'Please select a file.';
+                    return;
+                }
+
+                const file = fileInput.files[0];
+                const reader = new FileReader();
+
+                reader.onload = function (event) {
+                    const htmlContent = event.target.result;
+                    const parser = new DOMParser();
+                    const parsedDoc = parser.parseFromString(
+                        htmlContent,
+                        'text/html'
+                    );
+
+                    const ulElement = parsedDoc.querySelector(
+                        'body > div.side-panel > div:nth-child(1) > ul'
+                    );
+
+                    if (ulElement) {
+                        const parsedList = parseULToList(ulElement);
+                        console.log(parsedList);
+                        parsedResult.textContent =
+                            'Parsed UL Element: \n' + ulElement.outerHTML;
+                    } else {
+                        parsedResult.textContent =
+                            'The specified UL element was not found in the uploaded HTML file.';
+                    }
+                };
+
+                reader.readAsText(file);
+            }
+        </script>
+    </body>
+</html>

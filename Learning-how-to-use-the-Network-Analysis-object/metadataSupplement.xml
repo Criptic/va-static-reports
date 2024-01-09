@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<metadataSupplement>
+    <tables>
+        <table dataLocale="en_US" dataSources="ds7" resourceIdentifier="'cas-shared-default','CASUSER','EMPLOYEES','en_US'" tableModifiedTimeStamp="2023-12-27T15:20:16.206Z">
+            <columns>
+                <column dataType="string" label="Link" xref="Link"/>
+                <column dataType="string" label="Employee" xref="Employee"/>
+                <column dataType="string" label="Manager" xref="Manager"/>
+                <column dataType="string" label="Team" xref="Team"/>
+                <column dataType="double" format="BEST12." label="Salary" xref="Salary"/>
+                <column dataType="double" format="BEST12." label="EmployeeID" xref="EmployeeID"/>
+                <column dataType="double" format="BEST12." label="ManagerID" xref="ManagerID"/>
+                <column dataType="string" label="Country" xref="Country"/>
+                <column dataType="string" label="State" xref="State"/>
+                <column dataType="string" label="State2" xref="State2"/>
+            </columns>
+        </table>
+    </tables>
+    <version>2</version>
+</metadataSupplement>
