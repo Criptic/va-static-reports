@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SASReport xmlns="http://www.sas.com/sasreportmodel/bird-4.45.0" label="Raw-Level-1" features="promptModelV2" implicitInteractions="reportPrompt sectionPrompt sectionLink" createdLocale="en_US" createdVersion="4.45.0" dateCreated="2024-11-03T17:16:18Z" dateModified="2024-11-03T17:16:18Z" createdApplication="SAS Visual Analytics 2020" lastModifiedApplication="SAS Visual Analytics 2020" nextUniqueNameIndex="65">
+	<Results>
+		<Result ref="dd49" type="relational" status="success" dataLevel="baseline" label="Results" dataLocale="en_US" consumerDataModel="aggregated" supportsExportDetail="true" supportsCustomQuery="true" sortLocale="en_US" tableDateModified="2024-11-03T17:10:23.494Z">
+			<Variables>
+				<StringVariable label="EducationField" ref="bi50" varname="bi50" column="c0"/>
+				<NumericVariable format="COMMA12." usage="quantitative" definedAggregation="totalCount" label="Frequency" ref="bi51" varname="bi51" column="c1"/>
+			</Variables>
+			<Columns>
+				<StringColumn maxLength="1" colname="c0" encoding="text"/>
+				<NumericColumn dataType="double" colname="c1" encoding="text"/>
+			</Columns>
+			<DefinedColumnSortItems>
+				<DefinedMeasureSortItem variable="bi51" sortDirection="descending"/>
+				<DefinedSortItem variable="bi50" sortDirection="ascending"/>
+			</DefinedColumnSortItems>
+			<Data isIndexed="true" availableRowCount="6" contentKey="QZTIDD7ZPRSC2HSUXS7XVKP3PLDGYCI6" size="46" format="CSV" rowCount="6" grandTotal="false" dataLayout="minimal"><![CDATA[1,606.0
+3,464.0
+2,159.0
+5,132.0
+4,82.0
+0,27.0
+]]></Data>
+			<StringTable contentKey="S3TVBWK6X3XZ22C22CHMKZGIB6XE75MI" size="83" format="CSV" rowCount="6"><![CDATA["Human Resources"
+"Life Sciences"
+"Marketing"
+"Medical"
+"Other"
+"Technical Degree"
+]]></StringTable>
+		</Result>
+		<Result ref="dd58" type="relational" status="success" dataLevel="baseline" label="Results" dataLocale="en_US" consumerDataModel="aggregated" supportsExportDetail="true" supportsCustomQuery="true" sortLocale="en_US" tableDateModified="2024-11-03T17:10:23.494Z">
+			<Variables>
+				<StringVariable label="JobRole" ref="bi59" varname="bi59" column="c0"/>
+				<NumericVariable format="BEST12." usage="quantitative" definedAggregation="sum" label="YearsInCurrentRole" ref="bi60" varname="bi60" column="c1"/>
+			</Variables>
+			<Columns>
+				<StringColumn maxLength="1" colname="c0" encoding="text"/>
+				<NumericColumn dataType="double" colname="c1" encoding="text"/>
+			</Columns>
+			<DefinedColumnSortItems>
+				<DefinedMeasureSortItem variable="bi60" sortDirection="descending"/>
+			</DefinedColumnSortItems>
+			<Data isIndexed="true" availableRowCount="9" contentKey="PRKRAWLOUVGT53LIPSCYAF5VI3GJJM2Y" size="73" format="CSV" rowCount="9" grandTotal="false" dataLayout="minimal"><![CDATA[7,1583.0
+6,956.0
+2,829.0
+4,721.0
+3,658.0
+0,637.0
+5,503.0
+8,167.0
+1,163.0
+]]></Data>
+			<StringTable contentKey="TA3BQSC42PJBN5KH5IJZCFSUCXDMLQ6W" size="187" format="CSV" rowCount="9"><![CDATA["Healthcare Representative"
+"Human Resources"
+"Laboratory Technician"
+"Manager"
+"Manufacturing Director"
+"Research Director"
+"Research Scientist"
+"Sales Executive"
+"Sales Representative"
+]]></StringTable>
+		</Result>
+	</Results>
+	<DataDefinitions>
+		<ParentDataDefinition childQueryRelationship="independent" status="executable" dataSource="ds7" name="dd47">
+			<BusinessItems>
+				<RelationalDataItem name="bi50" base="bi15"/>
+				<RelationalDataItem name="bi51" base="bi43"/>
+			</BusinessItems>
+			<DataDefinition dataSource="ds7" type="multidimensional" name="dd48">
+				<MultidimensionalQuery detail="false">
+					<Axes>
+						<Axis type="column">
+							<BusinessItem ref="bi50"/>
+						</Axis>
+						<Axis type="row">
+							<BusinessItem ref="bi51"/>
+						</Axis>
+					</Axes>
+					<ColumnSortItems>
+						<MeasureSortItem ref="bi51" sortDirection="descending"/>
+						<SortItem ref="bi50" sortDirection="ascending"/>
+					</ColumnSortItems>
+				</MultidimensionalQuery>
+				<ResultDefinitions>
+					<ResultDefinition purpose="primary" maxRowsLookup="graphDefault" maxRowsBehavior="truncate" name="dd49"/>
+				</ResultDefinitions>
+			</DataDefinition>
+		</ParentDataDefinition>
+		<ParentDataDefinition childQueryRelationship="independent" status="executable" dataSource="ds7" name="dd56">
+			<BusinessItems>
+				<RelationalDataItem name="bi59" base="bi23"/>
+				<RelationalDataItem name="bi60" base="bi40"/>
+			</BusinessItems>
+			<DataDefinition dataSource="ds7" type="multidimensional" name="dd57">
+				<MultidimensionalQuery detail="false">
+					<Axes>
+						<Axis type="column">
+							<BusinessItem ref="bi59"/>
+						</Axis>
+						<Axis type="row">
+							<BusinessItem ref="bi60"/>
+						</Axis>
+					</Axes>
+					<ColumnSortItems>
+						<MeasureSortItem ref="bi60" sortDirection="descending"/>
+					</ColumnSortItems>
+				</MultidimensionalQuery>
+				<ResultDefinitions>
+					<ResultDefinition purpose="primary" maxRowsLookup="wordCloud" maxRowsBehavior="truncate" name="dd58"/>
+				</ResultDefinitions>
+			</DataDefinition>
+		</ParentDataDefinition>
+	</DataDefinitions>
+	<DataSources>
+		<DataSource label="HR_EMPLOYEE_ATTRITION" type="relational" name="ds7">
+			<CasResource server="cas-shared-default" library="CASUSER" table="HR_EMPLOYEE_ATTRITION" locale="en_US"/>
+			<BusinessItemFolder>
+				<DataItem name="bi8" xref="Age"/>
+				<DataItem name="bi9" xref="Attrition"/>
+				<DataItem name="bi10" xref="BusinessTravel"/>
+				<DataItem name="bi11" xref="DailyRate"/>
+				<DataItem name="bi12" xref="Department"/>
+				<DataItem name="bi13" xref="DistanceFromHome"/>
+				<DataItem name="bi14" xref="Education"/>
+				<DataItem name="bi15" xref="EducationField"/>
+				<DataItem name="bi16" xref="EmployeeCount"/>
+				<DataItem name="bi17" xref="EmployeeNumber"/>
+				<DataItem name="bi18" xref="EnvironmentSatisfaction"/>
+				<DataItem name="bi19" xref="Gender"/>
+				<DataItem name="bi20" xref="HourlyRate"/>
+				<DataItem name="bi21" xref="JobInvolvement"/>
+				<DataItem name="bi22" xref="JobLevel"/>
+				<DataItem name="bi23" xref="JobRole"/>
+				<DataItem name="bi24" xref="JobSatisfaction"/>
+				<DataItem name="bi25" xref="MaritalStatus"/>
+				<DataItem name="bi26" xref="MonthlyIncome"/>
+				<DataItem name="bi27" xref="MonthlyRate"/>
+				<DataItem name="bi28" xref="NumCompaniesWorked"/>
+				<DataItem name="bi29" xref="Over18"/>
+				<DataItem name="bi30" xref="OverTime"/>
+				<DataItem name="bi31" xref="PercentSalaryHike"/>
+				<DataItem name="bi32" xref="PerformanceRating"/>
+				<DataItem name="bi33" xref="RelationshipSatisfaction"/>
+				<DataItem name="bi34" xref="StandardHours"/>
+				<DataItem name="bi35" xref="StockOptionLevel"/>
+				<DataItem name="bi36" xref="TotalWorkingYears"/>
+				<DataItem name="bi37" xref="TrainingTimesLastYear"/>
+				<DataItem name="bi38" xref="WorkLifeBalance"/>
+				<DataItem name="bi39" xref="YearsAtCompany"/>
+				<DataItem name="bi40" xref="YearsInCurrentRole"/>
+				<DataItem name="bi41" xref="YearsSinceLastPromotion"/>
+				<DataItem name="bi42" xref="YearsWithCurrManager"/>
+				<PredefinedDataItem calculation="totalCount" name="bi43" label="Frequency" usage="quantitative" format="COMMA12."/>
+				<PredefinedDataItem calculation="totalCountPercent" name="bi44" label="Frequency Percent" usage="quantitative" format="PERCENT20.2"/>
+			</BusinessItemFolder>
+		</DataSource>
+	</DataSources>
+	<VisualElements>
+		<Graph graphType="bar" supplementalVisuals="ve52" resultDefinitions="dd49" name="ve46" data="dd47" label="Bar - EducationField 1" applyDynamicBrushes="yes" sourceInteractionVariables="bi50">
+			<EditorProperties>
+				<Property key="isAutoLabel">true</Property>
+			</EditorProperties>
+<![CDATA[<StatGraph border="false" opaque="false" includeMissingDiscrete="true" selectionMode="multiple" missingValueDisplay="autolabel">
+    <Dimension/>
+    <PadAttrs top="0px" bottom="0px" left="0px" right="0px"/>
+    <Dimension/>
+    <Meta>
+        <DynVars>
+            <DynVar name="CATEGORY" description="CATEGORY_VAR" required="true" assignedType="character" type="character">
+                <DefaultValues>
+                    <Value>dd49.bi50</Value>
+                </DefaultValues>
+            </DynVar>
+            <DynVar name="RESPONSE" description="MEASURE_VAR" required="true" assignedType="numeric" type="numeric" multiplesAllowed="true">
+                <DefaultValues>
+                    <Value>dd49.bi51</Value>
+                </DefaultValues>
+            </DynVar>
+            <DynVar name="GROUP" description="SUBGROUP_VAR" required="false" type="character"/>
+            <DynVar name="COLUMN" description="HORIZONTAL_SERIES_VAR" required="false" type="character" multiplesAllowed="true"/>
+            <DynVar name="ROW" description="VERTICAL_SERIES_VAR" required="false" type="character" multiplesAllowed="true"/>
+            <DynVar name="TIP" description="TIP_VAR" required="false" assignedType="numeric" type="any" multiplesAllowed="true">
+                <DefaultValues>
+                    <Value>dd49.bi50</Value>
+                    <Value>dd49.bi51</Value>
+                </DefaultValues>
+            </DynVar>
+            <DynVar name="KEY_FRAME" description="ANIMATION" required="false" type="time" multiplesAllowed="false"/>
+            <DynVar name="HIDDEN" description="HIDDEN_VAR" required="false" type="character" multiplesAllowed="true"/>
+        </DynVars>
+        <DataNameMap>
+            <Entry model="LayoutDataMatrix_2" data="dd49"/>
+        </DataNameMap>
+    </Meta>
+    <LayoutDataMatrix cellHeightMin="1px" cellWidthMin="1px" includeMissingClass="true" rowVars="ROW" columnVars="COLUMN" name="LayoutDataMatrix_2">
+        <LayoutPrototypeOverlay2D>
+            <BarChartParm name="BarChart" tipListPolicy="replace" _stmt="barchart" compactLabelFormats="true" groupDisplay="cluster" orient="horizontal" stat="none" tip="TIP" category="CATEGORY" responseVars="RESPONSE" group="GROUP"/>
+            <XAxisOpts name="categoryAxis" display="NONE">
+                <DiscreteOpts sortOrder="data"/>
+                <LinearOpts>
+                    <TickValueFormatOpts extractScale="true"/>
+                </LinearOpts>
+            </XAxisOpts>
+            <YAxisOpts reverse="true">
+                <DiscreteOpts tickValueFitPolicy="staggertruncatedrop" sortOrder="data" tickValueAppearance="auto"/>
+                <LinearOpts>
+                    <TickValueFormatOpts extractScale="true"/>
+                </LinearOpts>
+            </YAxisOpts>
+        </LayoutPrototypeOverlay2D>
+    </LayoutDataMatrix>
+    <LayoutGlobalLegend legendTitlePosition="top" allowCollapsed="true">
+        <AutoLegend>
+            <GraphNames>
+                <Value>BarChart</Value>
+            </GraphNames>
+        </AutoLegend>
+    </LayoutGlobalLegend>
+    <Animation keyFrameSortOrder="ascending_unformatted" keyFrame="KEY_FRAME"/>
+    <OverviewAxis maxPlotSize="60px" minPlotSize="35px" visible="off" axis="categoryAxis"/>
+</StatGraph>]]>
+		</Graph>
+		<Table columnSizing="autoFill" resultDefinitions="dd49" name="ve52" data="dd47" applyDynamicBrushes="yes" sourceInteractionVariables="bi50">
+			<Columns>
+				<Column variable="bi50"/>
+				<Column variable="bi51"/>
+			</Columns>
+		</Table>
+		<Graph graphType="wordCloud" supplementalVisuals="ve61" resultDefinitions="dd58" name="ve55" data="dd56" label="Word cloud - JobRole 1" applyDynamicBrushes="yes" sourceInteractionVariables="bi59">
+			<EditorProperties>
+				<Property key="isAutoLabel">true</Property>
+			</EditorProperties>
+			<Title auto="true"><P><DynamicSpan key="bird.autotitle.template.oneByTwo.fmt.txt"><Substitutions><Substitution valueType="label" variables="bi40"/><Substitution valueType="label" variables="bi23"/></Substitutions></DynamicSpan></P></Title>
+<![CDATA[<StatGraph border="false" opaque="false" includeMissingDiscrete="true" selectionMode="multiple" missingValueDisplay="autolabel">
+    <Dimension/>
+    <PadAttrs top="0px" bottom="0px" left="0px" right="0px"/>
+    <Dimension/>
+    <Meta>
+        <DynVars>
+            <DynVar name="WORD" description="WORD_VAR" required="true" assignedType="character" type="character">
+                <DefaultValues>
+                    <Value>dd58.bi59</Value>
+                </DefaultValues>
+            </DynVar>
+            <DynVar name="SIZE" description="SIZE_VAR" required="true" assignedType="numeric" type="numeric">
+                <DefaultValues>
+                    <Value>dd58.bi60</Value>
+                </DefaultValues>
+            </DynVar>
+            <DynVar name="COLOR" description="COLOR_VAR" required="false" type="numeric"/>
+            <DynVar name="TIP" description="TIP_VAR" required="false" assignedType="numeric" type="any" multiplesAllowed="true">
+                <DefaultValues>
+                    <Value>dd58.bi59</Value>
+                    <Value>dd58.bi60</Value>
+                </DefaultValues>
+            </DynVar>
+            <DynVar name="HIDDEN" description="HIDDEN_VAR" required="false" type="character" multiplesAllowed="true"/>
+        </DynVars>
+    </Meta>
+    <LayoutRegion>
+        <WordCloud name="WordCloud" tipListPolicy="replace" _stmt="wordCloud" arrangement="cloud" fontSizeFactor="4" tip="TIP" size="SIZE" colorResponse="COLOR" category="WORD" colorModel="TwoColorAltRamp"/>
+    </LayoutRegion>
+    <LayoutGlobalLegend legendTitlePosition="top" allowCollapsed="true">
+        <SizeLegend border="false" opaque="false" extractScale="true" title_type="KEYWORD" title="AUTO">
+            <GraphNames>
+                <Value>WordCloud</Value>
+            </GraphNames>
+        </SizeLegend>
+        <ContinuousLegend border="false" opaque="false" valueStyle="inflections" displayMissing="automatic" extractScale="true" title_type="KEYWORD" title="AUTO">
+            <GraphNames>
+                <Value>WordCloud</Value>
+            </GraphNames>
+        </ContinuousLegend>
+    </LayoutGlobalLegend>
+</StatGraph>]]>
+		</Graph>
+		<Table columnSizing="autoFill" resultDefinitions="dd58" name="ve61" data="dd56" applyDynamicBrushes="yes" sourceInteractionVariables="bi59">
+			<Columns>
+				<Column variable="bi59"/>
+				<Column variable="bi60"/>
+			</Columns>
+		</Table>
+		<Text name="ve64" label="Text 1" selectionDisabled="true" applyDynamicBrushes="no">
+			<P><Span>The data of this report is based off of the following data source: https://www.kaggle.com/datasets/pavansubhasht/ibm-hr-analytics-attrition-dataset.</Span></P>
+			<P><Span>Please note that this report was build for educational purposes only and is meant as an introduction to data literacy, as part of a course.</Span></P>
+		</Text>
+	</VisualElements>
+	<View>
+		<Section name="vi6" label="Page 1">
+			<Body>
+				<MediaContainer target="mt2">
+					<ResponsiveLayout orientation="vertical" overflow="fit">
+						<Weights mediaTarget="mt5" unit="percent">
+							<Weight value="100%"/>
+						</Weights>
+						<Weights mediaTarget="mt4" unit="percent">
+							<Weight value="100%"/>
+						</Weights>
+						<Weights mediaTarget="mt3" unit="percent">
+							<Weight value="100%"/>
+						</Weights>
+					</ResponsiveLayout>
+					<Visual ref="ve46" name="vi45">
+						<ResponsiveConstraint>
+							<WidthConstraint>
+								<Width mediaTarget="mt3" preferredSizeBehavior="ignore" flexibility="flexible"/>
+							</WidthConstraint>
+							<HeightConstraint>
+								<Height mediaTarget="mt3" preferredSizeBehavior="ignore" flexibility="flexible"/>
+							</HeightConstraint>
+						</ResponsiveConstraint>
+					</Visual>
+				</MediaContainer>
+			</Body>
+		</Section>
+		<Section name="vi53" label="Page 2">
+			<Body>
+				<MediaContainer target="mt2">
+					<ResponsiveLayout orientation="vertical" overflow="fit">
+						<Weights mediaTarget="mt5" unit="percent">
+							<Weight value="100%"/>
+						</Weights>
+						<Weights mediaTarget="mt4" unit="percent">
+							<Weight value="100%"/>
+						</Weights>
+						<Weights mediaTarget="mt3" unit="percent">
+							<Weight value="100%"/>
+						</Weights>
+					</ResponsiveLayout>
+					<Visual ref="ve55" name="vi54">
+						<ResponsiveConstraint>
+							<WidthConstraint>
+								<Width mediaTarget="mt3" preferredSizeBehavior="ignore" flexibility="flexible"/>
+							</WidthConstraint>
+							<HeightConstraint>
+								<Height mediaTarget="mt3" preferredSizeBehavior="ignore" flexibility="flexible"/>
+							</HeightConstraint>
+						</ResponsiveConstraint>
+					</Visual>
+				</MediaContainer>
+			</Body>
+		</Section>
+		<Section name="vi62" label="Page 3">
+			<Body>
+				<MediaContainer target="mt2">
+					<ResponsiveLayout orientation="vertical" overflow="fit">
+						<Weights mediaTarget="mt5" unit="percent">
+							<Weight value="100%"/>
+						</Weights>
+						<Weights mediaTarget="mt4" unit="percent">
+							<Weight value="100%"/>
+						</Weights>
+						<Weights mediaTarget="mt3" unit="percent">
+							<Weight value="100%"/>
+						</Weights>
+					</ResponsiveLayout>
+					<Visual ref="ve64" name="vi63">
+						<ResponsiveConstraint>
+							<WidthConstraint>
+								<Width mediaTarget="mt3" preferredSizeBehavior="ignore" flexibility="flexible"/>
+							</WidthConstraint>
+							<HeightConstraint>
+								<Height mediaTarget="mt3" preferredSizeBehavior="honor" flexibility="fixed"/>
+							</HeightConstraint>
+						</ResponsiveConstraint>
+					</Visual>
+				</MediaContainer>
+			</Body>
+		</Section>
+	</View>
+	<MediaSchemes>
+		<MediaScheme name="ms1">
+			<BaseStylesheetResource file="basems1.css" theme="opal"/>
+			<Stylesheet><![CDATA[]]></Stylesheet>
+		</MediaScheme>
+	</MediaSchemes>
+	<MediaTargets>
+		<MediaTarget windowSize="default" scheme="ms1" name="mt2"/>
+		<MediaTarget windowSize="small" scheme="ms1" name="mt3"/>
+		<MediaTarget windowSize="medium" scheme="ms1" name="mt4"/>
+		<MediaTarget windowSize="large" scheme="ms1" name="mt5"/>
+	</MediaTargets>
+	<Properties>
+		<Property key="displayDataSource">ds7</Property>
+		<Property key="ReportPackagesServiceVersion">Viya4 2024.10</Property>
+		<Property key="ReportDataServiceVersion">Viya4 2024.10</Property>
+	</Properties>
+	<ExportProperties>
+		<Export destination="pdf">
+			<Property key="showCoverPage" value="true"></Property>
+			<Property key="showPageNumbers" value="true"></Property>
+		</Export>
+	</ExportProperties>
+	<History>
+	<Versions>
+		<Version key="4.45.0" lastDate="2024-11-03T00:00:00Z"/>
+	</Versions>
+	<Editors>
+		<Editor applicationName="VA">
+			<Revision editorVersion="2024.10" lastDate="2024-11-03T17:16:18.293Z"/>
+		</Editor>
+	</Editors>
+</History>
+	<SASReportState>
+		<View/>
+	</SASReportState>
+</SASReport>

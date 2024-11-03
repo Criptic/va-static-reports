@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<metadataSupplement>
+    <tables>
+        <table dataLocale="en_US" dataSources="ds7" resourceIdentifier="'cas-shared-default','CASUSER','HR_EMPLOYEE_ATTRITION','en_US'" tableModifiedTimeStamp="2024-11-03T17:10:23.494Z">
+            <columns>
+                <column dataType="double" format="BEST12." label="Age" xref="Age"/>
+                <column dataType="string" label="Attrition" xref="Attrition"/>
+                <column dataType="string" label="BusinessTravel" xref="BusinessTravel"/>
+                <column dataType="double" format="BEST12." label="DailyRate" xref="DailyRate"/>
+                <column dataType="string" label="Department" xref="Department"/>
+                <column dataType="double" format="BEST12." label="DistanceFromHome" xref="DistanceFromHome"/>
+                <column dataType="double" format="BEST12." label="Education" xref="Education"/>
+                <column dataType="string" label="EducationField" xref="EducationField"/>
+                <column dataType="double" format="BEST12." label="EmployeeCount" xref="EmployeeCount"/>
+                <column dataType="double" format="BEST12." label="EmployeeNumber" xref="EmployeeNumber"/>
+                <column dataType="double" format="BEST12." label="EnvironmentSatisfaction" xref="EnvironmentSatisfaction"/>
+                <column dataType="string" label="Gender" xref="Gender"/>
+                <column dataType="double" format="BEST12." label="HourlyRate" xref="HourlyRate"/>
+                <column dataType="double" format="BEST12." label="JobInvolvement" xref="JobInvolvement"/>
+                <column dataType="double" format="BEST12." label="JobLevel" xref="JobLevel"/>
+                <column dataType="string" label="JobRole" xref="JobRole"/>
+                <column dataType="double" format="BEST12." label="JobSatisfaction" xref="JobSatisfaction"/>
+                <column dataType="string" label="MaritalStatus" xref="MaritalStatus"/>
+                <column dataType="double" format="BEST12." label="MonthlyIncome" xref="MonthlyIncome"/>
+                <column dataType="double" format="BEST12." label="MonthlyRate" xref="MonthlyRate"/>
+                <column dataType="double" format="BEST12." label="NumCompaniesWorked" xref="NumCompaniesWorked"/>
+                <column dataType="string" label="Over18" xref="Over18"/>
+                <column dataType="string" label="OverTime" xref="OverTime"/>
+                <column dataType="double" format="BEST12." label="PercentSalaryHike" xref="PercentSalaryHike"/>
+                <column dataType="double" format="BEST12." label="PerformanceRating" xref="PerformanceRating"/>
+                <column dataType="double" format="BEST12." label="RelationshipSatisfaction" xref="RelationshipSatisfaction"/>
+                <column dataType="double" format="BEST12." label="StandardHours" xref="StandardHours"/>
+                <column dataType="double" format="BEST12." label="StockOptionLevel" xref="StockOptionLevel"/>
+                <column dataType="double" format="BEST12." label="TotalWorkingYears" xref="TotalWorkingYears"/>
+                <column dataType="double" format="BEST12." label="TrainingTimesLastYear" xref="TrainingTimesLastYear"/>
+                <column dataType="double" format="BEST12." label="WorkLifeBalance" xref="WorkLifeBalance"/>
+                <column dataType="double" format="BEST12." label="YearsAtCompany" xref="YearsAtCompany"/>
+                <column dataType="double" format="BEST12." label="YearsInCurrentRole" xref="YearsInCurrentRole"/>
+                <column dataType="double" format="BEST12." label="YearsSinceLastPromotion" xref="YearsSinceLastPromotion"/>
+                <column dataType="double" format="BEST12." label="YearsWithCurrManager" xref="YearsWithCurrManager"/>
+            </columns>
+        </table>
+    </tables>
+    <version>2</version>
+</metadataSupplement>
