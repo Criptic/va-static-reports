@@ -19,6 +19,12 @@
                 crossorigin="anonymous"
             ></script>
         <script>
+            if (window.addEventListener) {
+                window.addEventListener("message", onMessage, false);
+            } else {
+                window.attachEvent("onmessage", onMessage);
+            }
+
             function onMessage(event) {
                 if (event && event.data) {
                     console.log(event);
